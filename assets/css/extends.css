@@ -1,0 +1,58 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body
+{
+    height: 100%;
+    margin: 0;
+    overflow: -moz-scrollbars-vertical;
+    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
+}
+
+.ict-panel-heading {
+    padding: 10px 15px;
+    border-bottom: 0 solid transparent;
+    border-top: 4px solid #9fdda7;
+}
+
+a:link {
+    color: #5fa65c;
+}
+
+a:visited {
+    color: #5fa65c;
+}
+
+a:hover {
+    color: #5fa65c;
+}
+
+.copyright {
+    font-size: 13px;
+    text-align: center;
+    color: #555555;
+    padding-top: 5px;
+    padding-bottom: 0;
+    height: 4em;
+    background-color: #121212;
+
+}
+.copyright span {
+    margin: 0.5em;
+}
+.copyright a {
+    color: #555555;
+}
+
+.wrapper {
+    min-height: 100%;
+    margin: 0 auto -4em;
+    margin-bottom: 0;
+}
+
+.thumbnail {
+    height: 400px;
+}
+
