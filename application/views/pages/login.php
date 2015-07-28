@@ -1,4 +1,4 @@
-<!--注册页面-->
+<!--登陆页面-->
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
@@ -8,7 +8,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="wrapper">
     <?php $this->load->view('./templates/navbar'); ?>
     <?php $this->load->view('./templates/jumptron'); ?>
-
 
     <div class="container">
         <div class="panel">
@@ -64,4 +63,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </body>
 
 
-</html>
+</html>hp $this->load->view('./templates/navbar'); ?>

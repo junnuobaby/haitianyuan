@@ -6,8 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php $this->load->view('./templates/head'); ?>
 <body>
 <div class="wrapper">
-    <?php $this->load->view('./templates/jumptron'); ?>
     <?php $this->load->view('./templates/navbar'); ?>
+    <?php $this->load->view('./templates/jumptron'); ?>
 
 
 </div>
