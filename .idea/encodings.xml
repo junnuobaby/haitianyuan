@@ -4,10 +4,17 @@
     <file url="file://$PROJECT_DIR$/application/controllers/index.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application/controllers/register.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application/views/pages/index.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application/views/pages/login.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application/views/pages/register.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/application/views/pages/register_user_info.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application/views/templates/footer.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application/views/templates/head.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application/views/templates/jumptron.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application/views/templates/navbar.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/touxiang/1.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/touxiang/2.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/touxiang/3.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/touxiang/4.jpg" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/assets/images/touxiang/5.jpg" charset="UTF-8" />
   </component>
 </project>
