@@ -19,15 +19,15 @@ body
 }
 
 a:link {
-    color: #5fa65c;
+    color: #434449;
 }
 
 a:visited {
-    color: #5fa65c;
+    color: #434449;
 }
 
 a:hover {
-    color: #5fa65c;
+    color: #434449;
 }
 
 .copyright {
@@ -55,5 +55,17 @@ a:hover {
 
 .thumbnail {
     height: 400px;
+}
+
+.carousel-control.right{
+    background-image:linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%)
+}
+.carousel-control.left{
+    background-image:linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%)
+
+}
+
+.carousel_style{
+    max-height: 200px;
 }
 

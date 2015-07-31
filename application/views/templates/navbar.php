@@ -23,7 +23,13 @@
                 </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="<?php echo base_url('/index.php/register') ?>">注册</a></li>
+                    <li><a href="<?php echo base_url('/index.php/register') ?>">注册<span>&nbsp</span></a></li>
+                    <li><a href="<?php echo base_url('/index.php/register/user_info') ?>">
+                            <img src="<?php echo base_url('/assets/images/qq.png'); ?>"
+                                 alt="..." class="img-rounded" style="width: 1.5em; height: 1.5em;"></a></li>
+                    <li><a href="<?php echo base_url('/index.php/register/user_info') ?>">
+                            <img src="<?php echo base_url('/assets/images/weibo.png'); ?>"
+                                 alt="..." class="img-rounded" style="width: 1.5em; height: 1.5em;"></a></li>
                 </ul>
 
                 <form class="navbar-form navbar-right">
