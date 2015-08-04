@@ -9,16 +9,12 @@ class Register extends CI_Controller {
         parent::__construct();
     }
 
+//    加载注册页面
     public function index()
     {
         $this->load->view('pages/register');
     }
-
-    public function user_choose()
-    {
-        $this->load->view('pages/jump_page');
-    }
-
+//    注册完成后，加载信息完善页面
     public function user_info()
     {
         $this->load->view('pages/register_user_info');

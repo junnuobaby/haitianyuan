@@ -34,17 +34,25 @@
 
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="recipient-name" placeholder="用户名">
+                        <input type="text" class="form-control" id="recipient-name" placeholder="邮箱 / 手机号码">
                     </div>
 
                     <div class="form-group">
                         <input type="text" class="form-control" id="recipient-name" placeholder="密码">
                     </div>
                     <button class="btn btn-danger" type="submit">登陆</button>
+                    <a href="#" data-toggle="tooltip" data-placement="bottom" title="忘记密码"><span class="glyphicon glyphicon-question-sign"></span></a>
+
                 </form>
 
             </div>
         </div>
     </div>
 </nav>
+
+<script>
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 

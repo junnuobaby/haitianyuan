@@ -31,7 +31,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <label for="user_mobile">手机号</span></label>
                                 <input type="tel" class="form-control" id="user_mobile" placeholder="手机号">
                                 <span class="glyphicon glyphicon-phone form-control-feedback" aria-hidden="true"></span>
-                                <button type="submit" class="btn btn-sm btn-danger col-md-offset-9" style="margin-top: 1em">发送验证码</button>
+                                <button  id="phone_number" class="btn btn-sm btn-danger col-md-offset-9" style="margin-top: 1em">发送验证码</button>
                             </div>
                             <div class="form-group has-feedback">
                                 <label for="verification_code">验证码 </label>
@@ -62,6 +62,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!--.wrapper-->
 <?php $this->load->view('./templates/footer'); ?>
+<script>
+    $(document).ready(function(){
+        $("phone_number").click(function(){
+            var xmlhttp = new XMLHttpRequest();
+            var phone_number = $("user_mobile").attr("value");
+            xmlhttp.open("GET", <?php echo base_url("index.php/register/send_code/")?> + phone_number,true);
+            xmlhttp.send();
+        });
+    });
+</script>
 </body>
 
 
