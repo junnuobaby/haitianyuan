@@ -72,3 +72,10 @@ a:hover {
 .register_input{
     padding-bottom: 1em;
 }
+.narbar_li{
+    width: 1.5em;
+    height: 1.5em;
+}
+.narbar_font_size{
+    font-size: 16px;
+}

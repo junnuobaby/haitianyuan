@@ -31,15 +31,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <label for="user_mobile">手机号</span></label>
                                 <input type="tel" class="form-control" id="user_mobile" name="phone_number" placeholder="手机号">
                                 <span class="glyphicon glyphicon-phone form-control-feedback" aria-hidden="true"></span>
-                                <a href="#" id="phone_number" class="btn btn-sm btn-danger col-md-offset-9" style="margin-top: 1em">发送验证码</a>
-<!--                                <input type="button" name='send_code' id="phone_number" class="btn btn-sm btn-danger col-md-offset-9" style="margin-top: 1em">发送验证码</input>-->
                             </div>
-                            <div class="form-group has-feedback">
-                                <label for="verification_code">验证码 </label>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
                                 <input type="text" class="form-control" id="verification_code" name="phone_code" placeholder="输入手机收到的验证码">
-                                <span class="glyphicon glyphicon-edit form-control-feedback"
-                                      aria-hidden="true"></span>
+                            </div></div>
+                            <div class="col-md-4">
+                                <a href="#" id="phone_number" class="btn btn-danger " >发送验证码</a>
                             </div>
+                        </div>
 
 
                             <div class="form-group has-feedback register_input" >
@@ -65,6 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!--.wrapper-->
 <?php $this->load->view('./templates/footer'); ?>
+
 <script type="text/javascript">
     var seconds = 59;
     var speed = 1000;
