@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="wrapper">
     <?php $this->load->view('./templates/navbar'); ?>
     <?php $this->load->view('./templates/jumptron'); ?>
-
+<!--    --><?php //echo base_url("index.php/register/send_code/")?>
 
     <div class="container">
         <div class="panel">
@@ -25,29 +25,29 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <div class="row">
                     <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
-                        <form>
-
+                        <?php echo form_open('register/load_info'); ?>
                             <div class="form-group has-feedback">
                                 <label for="user_mobile">手机号</span></label>
-                                <input type="tel" class="form-control" id="user_mobile" placeholder="手机号">
+                                <input type="tel" class="form-control" id="user_mobile" name="phone_number" placeholder="手机号">
                                 <span class="glyphicon glyphicon-phone form-control-feedback" aria-hidden="true"></span>
-                                <button  id="phone_number" class="btn btn-sm btn-danger col-md-offset-9" style="margin-top: 1em">发送验证码</button>
+                                <a href="#" id="phone_number" class="btn btn-sm btn-danger col-md-offset-9" style="margin-top: 1em">发送验证码</a>
+<!--                                <input type="button" name='send_code' id="phone_number" class="btn btn-sm btn-danger col-md-offset-9" style="margin-top: 1em">发送验证码</input>-->
                             </div>
                             <div class="form-group has-feedback">
                                 <label for="verification_code">验证码 </label>
-                                <input type="text" class="form-control" id="verification_code" placeholder="输入手机收到的验证码">
+                                <input type="text" class="form-control" id="verification_code" name="phone_code" placeholder="输入手机收到的验证码">
                                 <span class="glyphicon glyphicon-edit form-control-feedback"
                                       aria-hidden="true"></span>
                             </div>
                             <div class="form-group has-feedback">
                                 <label for="password1">登陆密码 </label>
-                                <input type="password" class="form-control" id="password1" placeholder="输入密码">
+                                <input type="password" class="form-control" id="password1" name="password" placeholder="输入密码">
                                 <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
                             </div>
 
                             <div class="form-group has-feedback">
                                 <label for="password2">确认密码 </label>
-                                <input type="password" class="form-control" id="password2" placeholder="再次输入密码">
+                                <input type="password" class="form-control" id="password2" name="passconf" placeholder="再次输入密码">
                                 <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
                             </div>
 
@@ -62,17 +62,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!--.wrapper-->
 <?php $this->load->view('./templates/footer'); ?>
+
+</body>
+
 <script>
     $(document).ready(function(){
-        $("phone_number").click(function(){
+        $("#phone_number").click(function(){
             var xmlhttp = new XMLHttpRequest();
-            var phone_number = $("user_mobile").attr("value");
-            xmlhttp.open("GET", <?php echo base_url("index.php/register/send_code/")?> + phone_number,true);
+            var phone_number = $("#user_mobile").val();
+            xmlhttp.open("GET", '<?php echo base_url("index.php/register/send_code/")?>' +'/'+ phone_number,true);
+            alert(phone_number);
             xmlhttp.send();
         });
     });
 </script>
-</body>
-
-
 </html>
