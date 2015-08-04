@@ -79,3 +79,7 @@ a:hover {
 .narbar_font_size{
     font-size: 16px;
 }
+.key_info{
+    color: #ff0000;
+    font-size: large;
+}
