@@ -21,228 +21,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner carousel_style" role="listbox">
-                    <div class="item active">
-                        <div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-                            <div class="row">
-                                <div class="col-lg-1 col-md-1"></div>
-                                <div class="col-sm-2 col-md-2 col-lg-2 ">
-                                    <div class="thumbnail">
-                                        <img src="<?php echo base_url('/assets/images/touxiang/1.jpg'); ?>" alt="...">
+                    <?php for ($external_count = 0; $external_count < 3; $external_count++): ?>
+                        <div class="item <?php if ($external_count == 0) {echo "active";} ?>">
+                            <div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
+                                <div class="row">
+                                    <div class="col-lg-1 col-md-1"></div>
+                                    <?php $names = array('tom', 'jack', 'bobo', 'hahha', 'xx');
+                                    $count = 0;
+                                    ?>
 
-                                        <div class="caption">
-                                            <h4>唐大师</h4>
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                                    <?php foreach ($names as $name): ?>
+                                        <?php $count++; ?>
+
+                                        <div class="col-sm-2 col-md-2 col-lg-2 ">
+                                            <div class="thumbnail">
+                                                <img
+                                                    src="<?php echo base_url('/assets/images/touxiang/' . $count . '.jpg'); ?>"
+                                                    alt="...">
+
+                                                <div class="caption">
+                                                    <h4><?php echo $name ?></h4>
+
+                                                    <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
+                                    <?php endforeach; ?>
                                 </div>
-
-                                <div class="col-sm-2 col-md-2 col-lg-2">
-                                    <div class="thumbnail">
-                                        <img src="<?php echo base_url('/assets/images/touxiang/2.png'); ?>" alt="...">
-
-                                        <div class="caption">
-                                            <h4>王大师</h4>
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2 col-md-2 col-lg-2 ">
-                                    <div class="thumbnail">
-                                        <img src="<?php echo base_url('/assets/images/touxiang/3.jpg'); ?>" alt="...">
-
-                                        <div class="caption">
-                                            <h4>刘小哥</h4>
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-sm-2 col-md-2 col-lg-2">
-                                    <div class="thumbnail">
-                                        <img src="<?php echo base_url('/assets/images/touxiang/4.jpg'); ?>" alt="...">
-
-                                        <div class="caption">
-                                            <h4>向二师兄</h4>
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2 col-md-2 col-lg-2">
-                                    <div class="thumbnail">
-                                        <img src="<?php echo base_url('/assets/images/touxiang/5.jpg'); ?>" alt="...">
-
-                                        <div class="caption">
-                                            <h4>吴半仙</h4>
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
                             </div>
                         </div>
-                    </div>
-
-                    <div class="item">
-                        <div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-                            <div class="row">
-                                <div class="col-lg-1 col-md-1"></div>
-                                <div class="col-sm-2 col-md-2 col-lg-2 ">
-                                    <div class="thumbnail">
-                                        <img src="..." alt="...">
-
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-
-                                            <p>...</p>
-
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2 col-md-2 col-lg-2">
-                                    <div class="thumbnail">
-                                        <img src="..." alt="...">
-
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-
-                                            <p>...</p>
-
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2 col-md-2 col-lg-2 ">
-                                    <div class="thumbnail">
-                                        <img src="..." alt="...">
-
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-
-                                            <p>...</p>
-
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-sm-2 col-md-2 col-lg-2">
-                                    <div class="thumbnail">
-                                        <img src="..." alt="...">
-
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-
-                                            <p>...</p>
-
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2 col-md-2 col-lg-2">
-                                    <div class="thumbnail">
-                                        <img src="..." alt="...">
-
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-
-                                            <p>...</p>
-
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="item">
-                        <div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
-                            <div class="row">
-                                <div class="col-lg-1 col-md-1"></div>
-                                <div class="col-sm-2 col-md-2 col-lg-2 ">
-                                    <div class="thumbnail">
-                                        <img src="..." alt="...">
-
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-
-                                            <p>...</p>
-
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2 col-md-2 col-lg-2">
-                                    <div class="thumbnail">
-                                        <img src="..." alt="...">
-
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-
-                                            <p>...</p>
-
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2 col-md-2 col-lg-2 ">
-                                    <div class="thumbnail">
-                                        <img src="..." alt="...">
-
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-
-                                            <p>...</p>
-
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                                <div class="col-sm-2 col-md-2 col-lg-2">
-                                    <div class="thumbnail">
-                                        <img src="..." alt="...">
-
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-
-                                            <p>...</p>
-
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col-sm-2 col-md-2 col-lg-2">
-                                    <div class="thumbnail">
-                                        <img src="..." alt="...">
-
-                                        <div class="caption">
-                                            <h3>Thumbnail label</h3>
-
-                                            <p>...</p>
-
-                                            <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
+                    <?php endfor; ?>
 
 
                     <!-- Controls -->

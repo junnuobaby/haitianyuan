@@ -27,7 +27,7 @@
                     <li><a href="<?php echo base_url('/index.php/register/user_info') ?>">
                             <img src="<?php echo base_url('/assets/images/qq.png'); ?>"
                                  alt="..." class="img-rounded narbar_li"></a></li>
-                    <li><a href="<?php echo base_url('/index.php/register/user_info') ?>">
+                    <li><a href="<?php echo base_url('/index.php/login/weibo_login') ?>">
                             <img src="<?php echo base_url('/assets/images/weibo.png'); ?>"
                                  alt="..." class="img-rounded narbar_li"></a></li>
                 </ul>

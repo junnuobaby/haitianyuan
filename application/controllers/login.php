@@ -11,7 +11,19 @@ class Login extends CI_Controller {
 
     public function index()
     {
-        $this->load->view('pages/login');
+        $this->load->view('pages/weibo_login');
     }
+
+
+    public function weibo_login()
+    {
+        $this->load->view('pages/weibo_login');
+    }
+
+    public function qq_login()
+    {
+        $this->load->view('pages/qq_login');
+    }
+
 }
 

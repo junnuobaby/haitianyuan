@@ -79,7 +79,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             clearTimeout(timeId);
             phone_number.innerHTML = "获取验证码";
             seconds = 59;
-
         };
     }
 
