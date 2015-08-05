@@ -26,16 +26,16 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row">
                     <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
 
-                        <?php echo form_open('register/load_info'); ?>
+                        <?php echo form_open('register/load_info' , 'onsubmit="return checkform(this)"'); ?>
                             <div class="form-group has-feedback">
                                 <label for="user_mobile">手机号</span></label>
-                                <input type="tel" class="form-control" id="user_mobile" name="phone_number" placeholder="手机号">
+                                <input type="tel" class="form-control" id="user_mobile" name="phone_number" placeholder="手机号" required>
                                 <span class="glyphicon glyphicon-phone form-control-feedback" aria-hidden="true"></span>
                             </div>
                         <div class="row">
                             <div class="col-md-8">
                                 <div class="form-group">
-                                <input type="text" class="form-control" id="verification_code" name="phone_code" placeholder="输入手机收到的验证码">
+                                <input type="text" class="form-control" id="verification_code" name="phone_code" placeholder="输入手机收到的验证码" required>
                             </div></div>
                             <div class="col-md-4">
                                 <a href="#" id="phone_number" class="btn btn-danger " >发送验证码</a>
@@ -45,13 +45,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                             <div class="form-group has-feedback register_input" >
                                 <label for="password1">登陆密码 </label>
-                                <input type="password" class="form-control" id="password1" name="password" placeholder="输入密码">
+                                <input type="password" class="form-control" id="password1" name="password" placeholder="输入密码" required>
                                 <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
                             </div>
 
                             <div class="form-group has-feedback register_input">
                                 <label for="password2">确认密码 </label>
-                                <input type="password" class="form-control" id="password2" name="passconf" placeholder="再次输入密码">
+                                <input type="password" class="form-control" id="password2" name="passconf" placeholder="再次输入密码" required>
                                 <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
                             </div>
 
@@ -71,6 +71,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     var seconds = 59;
     var speed = 1000;
     var phone_number = document.getElementById("phone_number");
+//    倒计时一分钟
     function countDown(seconds,speed){
         var txt = ((seconds < 10) ? "0" + seconds : seconds);
         phone_number.innerHTML = txt;
@@ -91,5 +92,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             countDown(seconds,speed);
         });
     });
+
+//    表单验证
+    function checkform(){
+    if (document.form.password1.value != document.form.password2.value) {
+        alert("您两次输入的密码不一样！请重新输入.");
+        password1.focus();
+        return false;
+    }
+    return true;
+    }
+
+
 </script>
 </html>

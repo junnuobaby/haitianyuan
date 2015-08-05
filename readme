@@ -1,0 +1,13 @@
+ps:自定义样式：extends.css文件
+
+1. application/views/templates文件夹下的页面说明
+    footer 页脚
+    head 头文件,链入外部样式表
+    jumptron 加载巨幕
+    navbar 顶部导航条
+
+2. application/views/pages文件夹下的页面说明
+    index   首页
+    register 注册页面
+    register_user_info 用户注册完跳转至此页面完善个人信息
+    weibo_login  微博登陆界面

@@ -22,7 +22,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner carousel_style" role="listbox">
                     <?php for ($external_count = 0; $external_count < 3; $external_count++): ?>
-                        <div class="item <?php if ($external_count == 0) {echo "active";} ?>">
+                        <div class="item <?php if ($external_count == 0) {
+                            echo "active";
+                        } ?>">
                             <div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
                                 <div class="row">
                                     <div class="col-lg-1 col-md-1"></div>
@@ -32,7 +34,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                     <?php foreach ($names as $name): ?>
                                         <?php $count++; ?>
-
                                         <div class="col-sm-2 col-md-2 col-lg-2 ">
                                             <div class="thumbnail">
                                                 <img

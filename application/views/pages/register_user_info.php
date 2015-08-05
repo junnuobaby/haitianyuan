@@ -1,4 +1,4 @@
-<!--用户完善个人资料页面-->
+<!--用户注册后跳转至此页面完善个人资料页面-->
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
@@ -40,14 +40,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="form-group has-feedback">
                                         <label for="username">用户名 <span class="key_info">*</span></span></label>
                                         <input type="text" class="form-control" id="username" name="username"
-                                               placeholder="用户名">
+                                               placeholder="用户名" required>
                                         <span class="glyphicon glyphicon-user form-control-feedback"
                                               aria-hidden="true"></span>
                                     </div>
                                     <div class="form-group has-feedback">
                                         <label for="email">邮箱 <span class="key_info">*</span> </label>
                                         <input type="email" class="form-control" id="user_email" name="user_email"
-                                               placeholder="e-mail">
+                                               placeholder="e-mail" required>
                                         <span class="glyphicon glyphicon-envelope form-control-feedback"
                                               aria-hidden="true"></span>
                                     </div>
@@ -73,14 +73,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="form-group has-feedback">
                                         <label for="username">用户名 <span class="key_info">*</span></label>
                                         <input type="text" class="form-control" id="master" name="master"
-                                               placeholder="用户名">
+                                               placeholder="用户名" required>
                                         <span class="glyphicon glyphicon-user form-control-feedback"
                                               aria-hidden="true"></span>
                                     </div>
                                     <div class="form-group has-feedback">
                                         <label for="email">邮箱 <span class="key_info">*</span> </label>
                                         <input type="email" class="form-control" id="master_email" name="master_email"
-                                               placeholder="e-mail">
+                                               placeholder="e-mail" required>
                                         <span class="glyphicon glyphicon-envelope form-control-feedback"
                                               aria-hidden="true"></span>
                                     </div>
@@ -101,20 +101,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <div class="form-group has-feedback">
                                         <label for="adviser_name">真实姓名 <span class="key_info">*</span> </label>
                                         <input type="text" class="form-control" id="master_name" name="master_name"
-                                               placeholder="您的真实姓名">
+                                               placeholder="您的真实姓名" required>
                                         <span class="glyphicon glyphicon-sunglasses form-control-feedback"
                                               aria-hidden="true"></span>
                                     </div>
                                     <div class="form-group has-feedback">
                                         <label for="id_code">身份证号码 <span class="key_info">*</span></label>
                                         <input type="text" class="form-control" id="master_idc" name="master_idc"
-                                               placeholder="身份证号码">
+                                               placeholder="身份证号码" required>
                                         <span class="glyphicon glyphicon-eye-open form-control-feedback"
                                               aria-hidden="true"></span>
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputFile">身份证照片 <span class="key_info">*</span></label>
-                                        <input type="file" id="master_idc_pic" name="master_idc_pic">
+                                        <input type="file" id="master_idc_pic" name="master_idc_pic" required>
 
                                         <p class="help-block">请上传你的身份证正面照片</p>
                                     </div>
