@@ -70,7 +70,7 @@ a:hover {
 }
 
 .register_input{
-    padding-bottom: 1em;
+    padding-bottom: 0.5em;
 }
 .narbar_li{
     width: 1.5em;
@@ -82,4 +82,18 @@ a:hover {
 .key_info{
     color: #ff0000;
     font-size: large;
+}
+#info_dropdown{
+    width: 300px;
+}
+
+.info_dropdown_menu{
+    min-width: 300px;
+}
+
+.btn-a-light:link,
+.btn-a-light:visited,
+.btn-a-light:hover,
+.btn-a-light:active{
+    color: white;
 }

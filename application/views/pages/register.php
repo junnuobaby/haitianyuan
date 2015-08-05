@@ -8,7 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <div class="wrapper">
     <?php $this->load->view('./templates/navbar'); ?>
     <?php $this->load->view('./templates/jumptron'); ?>
-<!--    --><?php //echo base_url("index.php/register/send_code/")?>
+    <!--    --><?php //echo base_url("index.php/register/send_code/")?>
 
     <div class="container">
         <div class="panel">
@@ -26,36 +26,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row">
                     <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
 
-                        <?php echo form_open('register/load_info' , 'onsubmit="return checkform(this)"'); ?>
-                            <div class="form-group has-feedback">
-                                <label for="user_mobile">手机号</span></label>
-                                <input type="tel" class="form-control" id="user_mobile" name="phone_number" placeholder="手机号" required>
-                                <span class="glyphicon glyphicon-phone form-control-feedback" aria-hidden="true"></span>
-                            </div>
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="form-group">
-                                <input type="text" class="form-control" id="verification_code" name="phone_code" placeholder="输入手机收到的验证码" required>
-                            </div></div>
-                            <div class="col-md-4">
-                                <a href="#" id="phone_number" class="btn btn-danger " >发送验证码</a>
-                            </div>
+                        <?php echo form_open('register/load_info', 'onsubmit="return checkform(this)"'); ?>
+                        <div class="form-group has-feedback">
+                            <label for="user_mobile">手机号</span></label>
+                            <input type="tel" class="form-control" id="user_mobile" name="phone_number"
+                                   placeholder="手机号" required>
+                            <span class="glyphicon glyphicon-phone form-control-feedback" aria-hidden="true"></span>
+                        </div>
+                        <div class="form-group register_input">
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="verification_code" name="phone_code"
+                                           placeholder="输入手机收到的验证码" required>
+                                <span class="input-group-btn">
+                                    <a href="#" id="send_code" class="btn btn-danger btn-a-light">发送验证码</a>
+                                </span>
+                            </div><!-- /input-group -->
                         </div>
 
 
-                            <div class="form-group has-feedback register_input" >
-                                <label for="password1">登陆密码 </label>
-                                <input type="password" class="form-control" id="password1" name="password" placeholder="输入密码" required>
-                                <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
-                            </div>
+                        <div class="form-group has-feedback register_input">
+                            <label for="password1">登陆密码 </label>
+                            <input type="password" class="form-control" id="password1" name="password"
+                                   placeholder="输入密码" required>
+                            <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
+                        </div>
 
-                            <div class="form-group has-feedback register_input">
-                                <label for="password2">确认密码 </label>
-                                <input type="password" class="form-control" id="password2" name="passconf" placeholder="再次输入密码" required>
-                                <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
-                            </div>
+                        <div class="form-group has-feedback register_input">
+                            <label for="password2">确认密码 </label>
+                            <input type="password" class="form-control" id="password2" name="passconf"
+                                   placeholder="再次输入密码" required>
+                            <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
+                        </div>
 
-                            <button type="submit" class="btn btn-lg btn-block btn-danger">注册</button>
+                        <button type="submit" class="btn btn-lg btn-block btn-danger">注册</button>
                         </form>
                     </div>
                 </div>
@@ -68,40 +71,36 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php $this->load->view('./templates/footer'); ?>
 
 <script type="text/javascript">
-    var seconds = 59;
+    var second = 59;
     var speed = 1000;
-    var phone_number = document.getElementById("phone_number");
-//    倒计时一分钟
-    function countDown(seconds,speed){
-        var txt = ((seconds < 10) ? "0" + seconds : seconds);
-        phone_number.innerHTML = txt;
-        var timeId = setTimeout("countDown(seconds--,speed)",speed);
-        if(seconds == 0){
+    var send_code = $('#send_code');
+    var count_down = false;
+    //    倒计时一分钟
+    function countDown(seconds, speed) {
+        var txt = '倒计时 ' + ((seconds < 10) ? "0" + seconds : seconds) + ' 秒';
+        send_code.html(txt);
+        send_code.attr('disabled', 'disabled');
+        count_down = true;
+        var timeId = setTimeout("countDown(second--,speed)", speed);
+        if (seconds == 0) {
             clearTimeout(timeId);
-            phone_number.innerHTML = "获取验证码";
-            seconds = 59;
-        };
+            send_code.html('获取验证码');
+            send_code.removeAttr('disabled');
+            second = 59;
+            count_down = false;
+        }
     }
-
     $(document).ready(function () {
-        $("#phone_number").click(function () {
-            var xmlhttp = new XMLHttpRequest();
-            var phone_number = $("user_mobile").val();
-            xmlhttp.open("GET", '<?php echo base_url("index.php/register/send_code/")?>' + '/' +phone_number, true);
-            xmlhttp.send();
-            countDown(seconds,speed);
+        send_code.click(function () {
+            if (!count_down) {
+                var xmlhttp = new XMLHttpRequest();
+                var phone_number = $("user_mobile").val();
+                xmlhttp.open("GET", '<?php echo base_url("index.php/register/send_code/")?>' + '/' + phone_number, true);
+                xmlhttp.send();
+                countDown(second, speed);
+            }
         });
     });
-
-//    表单验证
-    function checkform(){
-    if (document.form.password1.value != document.form.password2.value) {
-        alert("您两次输入的密码不一样！请重新输入.");
-        password1.focus();
-        return false;
-    }
-    return true;
-    }
 
 
 </script>
