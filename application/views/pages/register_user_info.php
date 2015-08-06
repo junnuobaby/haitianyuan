@@ -114,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputFile">身份证照片 <span class="key_info">*</span></label>
-                                        <input type="file" id="master_idc_pic" name="master_idc_pic" required>
+                                        <input type="file" id="master_idc_pic" name="master_idc_pic" required onchange="readFile(this)">
 
                                         <p class="help-block">请上传你的身份证正面照片</p>
                                     </div>
@@ -149,6 +149,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--.wrapper-->
 <?php $this->load->view('./templates/footer'); ?>
 <script type="text/javascript">
+
+    function readFile(obj){
+        var file = obj.files[0];
+        //判断类型是不是图片
+        if(!/image\/\w+/.test(file.type)){
+            alert("请确保文件为图像类型");
+            return false;
+        }
+        var reader = new FileReader();
+        reader.readAsDataURL(file);
+        reader.onload = function(e){
+            alert(this.result); //就是base64
+
+        }
+    }
+
+
     $('#myTabs a').click(function (e) {
         e.preventDefault()
         $(this).tab('show')
