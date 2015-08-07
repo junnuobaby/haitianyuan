@@ -34,20 +34,24 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- 会员个人资料完善 -->
                         <div role="tabpanel" class="tab-pane active" id="user" aria-labelledby="user-tab">
                             <div class="col-md-5 col-md-offset-2">
-                                <form>
+                                <form action="#" method="post">
                                     <br/>
 
                                     <div class="form-group has-feedback">
-                                        <label for="username">用户名 <span class="key_info">*</span></span></label>
+                                        <label for="username">用户名 <span class="key_info">*</span></label> <label
+                                            id="username_error" style="color: red"></label>
                                         <input type="text" class="form-control" id="username" name="username"
-                                               placeholder="用户名" required>
+                                               placeholder="用户名" required onblur="validate_id(this, 'username')"
+                                               onfocus="hide_tips('username')">
                                         <span class="glyphicon glyphicon-user form-control-feedback"
                                               aria-hidden="true"></span>
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <label for="email">邮箱 <span class="key_info">*</span> </label>
+                                        <label for="email">邮箱 <span class="key_info">*</span></label> <label
+                                            id="user_email_error" style="color: red"></label>
                                         <input type="email" class="form-control" id="user_email" name="user_email"
-                                               placeholder="e-mail" required>
+                                               placeholder="e-mail" required onblur="validate_email(this, 'user')"
+                                               onfocus="hide_tips('user_email')">
                                         <span class="glyphicon glyphicon-envelope form-control-feedback"
                                               aria-hidden="true"></span>
                                     </div>
@@ -71,16 +75,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     <br/>
 
                                     <div class="form-group has-feedback">
-                                        <label for="username">用户名 <span class="key_info">*</span></label>
+                                        <label for="username">用户名 <span class="key_info">*</span></label> <label
+                                            id="master_error" style="color: red"></label>
                                         <input type="text" class="form-control" id="master" name="master"
-                                               placeholder="用户名" required>
+                                               placeholder="用户名" required onblur=" validate_id(this, 'master')"
+                                               onfocus="hide_tips('master')">
                                         <span class="glyphicon glyphicon-user form-control-feedback"
                                               aria-hidden="true"></span>
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <label for="email">邮箱 <span class="key_info">*</span> </label>
+                                        <label for="email">邮箱 <span class="key_info">*</span> </label> <label
+                                            id="master_email_error" style="color: red"></label>
                                         <input type="email" class="form-control" id="master_email" name="master_email"
-                                               placeholder="e-mail" required>
+                                               placeholder="e-mail" required onblur="validate_email(this, 'master')"
+                                               onfocus="hide_tips('master_email')">
                                         <span class="glyphicon glyphicon-envelope form-control-feedback"
                                               aria-hidden="true"></span>
                                     </div>
@@ -114,7 +122,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleInputFile">身份证照片 <span class="key_info">*</span></label>
-                                        <input type="file" id="master_idc_pic" name="master_idc_pic" required onchange="readFile(this)">
+                                        <input type="file" id="master_idc_pic" name="master_idc_pic" required
+                                               onchange="readFile(this)">
 
                                         <p class="help-block">请上传你的身份证正面照片</p>
                                     </div>
@@ -149,17 +158,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <!--.wrapper-->
 <?php $this->load->view('./templates/footer'); ?>
 <script type="text/javascript">
+    //    $(document).ready(function(){
+    //        $(function () {
+    //            $('[data-placement="top"]').popover()
+    //        })
+    //    });
 
-    function readFile(obj){
+
+    function readFile(obj) {
         var file = obj.files[0];
         //判断类型是不是图片
-        if(!/image\/\w+/.test(file.type)){
+        if (!/image\/\w+/.test(file.type)) {
             alert("请确保文件为图像类型");
             return false;
         }
         var reader = new FileReader();
         reader.readAsDataURL(file);
-        reader.onload = function(e){
+        reader.onload = function (e) {
             alert(this.result); //就是base64
 
         }
@@ -170,6 +185,39 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         e.preventDefault()
         $(this).tab('show')
     })
+
+//onfocus触发时，隐藏提示语
+    function hide_tips(id) {
+        $('#' + id + '_error').html('');
+    }
+
+    //    用户名格式验证，用户名可以为中文，字母，数字和下划线的组成，但不能以数字开头
+    function validate_id(field, id) {
+        with (field) {
+            var result = new RegExp("^[a-zA-Z\u4e00-\u9fa5][0-9a-zA-Z\u4e00-\u9fa5]*");
+            if (!result.test(value)) {
+                $('#' + id + '_error').html('(用户名格式错误！)');
+            }
+            else {
+                $('#' + id + '_error').html('');
+            }
+        }
+    }
+
+
+    //    e-mail 格式验证
+    function validate_email(field, id) {
+        apos = field.value.indexOf("@");
+        dotpos = field.value.lastIndexOf(".");
+        if (apos < 1 || dotpos - apos < 2) {
+            $('#' + id + '_email_error').html('(邮箱格式错误！)');
+        }
+        else {
+            $('#' + id + '_email_error').html('');
+        }
+    }
+
+
 </script>
 </body>
 </html>

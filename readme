@@ -11,3 +11,4 @@ ps:自定义样式：extends.css文件
     register 注册页面
     register_user_info 用户注册完跳转至此页面完善个人信息
     login  登陆界面
+    profile 个人资料页面

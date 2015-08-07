@@ -36,11 +36,11 @@
                 <?php else: ?>
                     <!--                    登陆成功后导航条上显示的内容-->
                     <ul class="nav navbar-nav navbar-right">
+<!--                        显示用户名-->
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                               aria-haspopup="true" aria-expanded="false">
-                                君诺宝宝 <span class="caret"></span></a>
-
+                               aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-user"></span>
+                                <?php echo '君诺宝宝' ?><span class="caret"></span></a>
 
                             <ul class="dropdown-menu dropdown-menu-profile">
                                 <li id="info_dropdown">
@@ -51,8 +51,9 @@
                                                  alt="...">
                                         </div>
                                         <div class="col-md-7">
-                                            <a href="#" class="btn btn-default">个人资料</a>
+                                            <a href="<?php echo base_url('/index.php/user/user_profile') ?>" class="btn btn-default">个人资料</a>
                                             <a href="#" class="btn btn-default">退出</a>
+
                                             <div class="panel panel-default sign">
                                                 <div class="panel-body">
                                                     我是一个萌哒哒的小妹子
@@ -60,27 +61,41 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row" style="padding-top: 1em;">
+                                    <div class="row" >
                                         <div class="col-md-1"></div>
                                         <div class="col-md-3">
                                             <a href="#"> 关注 <?php echo '14' ?></a>
                                         </div>
-                                        <div style='width:1px;border:1px solid black;float:left;height:15px;'></div>
+                                        <div class="dropdown-menu-profile-item"></div>
                                         <div class="col-md-3">
                                             <a href="#"> 粉丝 <?php echo '20' ?></a>
                                         </div>
-                                        <div style='width:1px;border:1px solid black;float:left;height:15px;'></div>
+                                        <div class="dropdown-menu-profile-item"></div>
                                         <div class="col-md-3">
                                             <a href="#"> 购买 <?php echo '0' ?></a>
                                         </div>
-
-
                                     </div>
                                 </li>
                             </ul>
                         </li>
-                    </ul>
+<!--                        显示用户的消息-->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false"><span
+                                    class="glyphicon glyphicon-envelope"></span>
+                                消息<span class="caret"></span></a>
 
+                            <ul class="dropdown-menu">
+                                <li><a href="#">@我的</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">我的购买</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">我的钱包</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-star"></span> 我的收藏</a></li>
+                            </ul>
+                        </li>
+                    </ul>
                 <?php endif; ?>
             </div>
         </div>

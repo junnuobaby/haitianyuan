@@ -1,4 +1,4 @@
-<!--首页-->
+<!--登陆-->
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
