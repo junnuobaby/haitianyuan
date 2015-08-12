@@ -26,13 +26,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row">
                     <div class="col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4">
 
-                        <?php echo form_open('register/load_info')?>
+                        <?php echo form_open('register/load_info') ?>
                         <div class="form-group has-feedback">
                             <label for="user_mobile">手机号</span></label>
                             <label id="user_mobile_error" style="color: red"></label>
                             <input type="tel" class="form-control" id="user_mobile" name="phone_number"
                                    placeholder="请输入11位有效手机号码" required onblur=" validate_phone(this,'user_mobile')"
-                                   data-container="body"  data-placement="top"
+                                   data-container="body" data-placement="top"
                                    data-content="请输入11位有效手机号码！">
 
                             <span class="glyphicon glyphicon-phone form-control-feedback" aria-hidden="true"></span>
@@ -55,7 +55,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <input type="password" class="form-control" id="password1" name="password"
                                    placeholder="密码长度6~32位" required
                                    onblur=" validate_pwd(this)"
-                                   data-container="body"  data-placement="top"
+                                   data-container="body" data-placement="top"
                                    data-content="密码长度必须在6~32位！">
                             <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
                         </div>
@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <input type="password" class="form-control" id="password2" name="passconf"
                                    placeholder="再次输入密码" required
                                    onblur=" validate_pwdconf(this)"
-                                   data-container="body"  data-placement="top"
+                                   data-container="body" data-placement="top"
                                    data-content="前后密码输入不一致！">
                             <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
                         </div>
@@ -114,7 +114,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             }
         });
 
+        //    检查用户输入的手机号码是否已经被注册
+        $('#user_mobile').onblur(
+            function () {
+                var phone_num = $('#user_mobile').val();
+                $.get("<?php  echo base_url('/register/is_exist/web/')?>"+'/' + phone_num ,
+                    function (data, status) {
+                        if (data  == 'true'){
+                            $('#user_mobile_error').html('(该号码已注册！)');
+                        }
+                    });
+            }
+        );
+
+
     });
+
 
 
     //检查手机号码的合法性，长度为11位
@@ -133,7 +148,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     //检查密码是否合法,密码长度6-50位
     function validate_pwd(field, id) {
         with (field) {
-            if (value.length <6 | value.length > 50) {
+            if (value.length < 6 | value.length > 50) {
                 $('#' + id + '_error').html('(请输入6~32位密码！)');
             }
             else {
