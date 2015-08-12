@@ -107,20 +107,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         send_code.click(function () {
             if (!count_down) {
                 var xmlhttp = new XMLHttpRequest();
-                var phone_number = $("user_mobile").val();
-                xmlhttp.open("GET", '<?php echo base_url("index.php/register/send_code/")?>' + '/' + phone_number, true);
+                var phone_number = $("#user_mobile").val();
+                xmlhttp.open("GET", '<?php echo base_url("index.php/register/send_code/")?>' + '/web/' + phone_number, true);
                 xmlhttp.send();
                 countDown(second, speed);
             }
         });
 
         //    检查用户输入的手机号码是否已经被注册
-        $('#user_mobile').onblur(
+        $('#user_mobile').blur(
+
             function () {
                 var phone_num = $('#user_mobile').val();
-                $.get("<?php  echo base_url('/register/is_exist/web/')?>"+'/' + phone_num ,
+                $.get("<?php  echo base_url('/index.php/register/is_exist/web/')?>"+'/' + phone_num ,
                     function (data, status) {
+                        alert(data);
                         if (data  == 'true'){
+
                             $('#user_mobile_error').html('(该号码已注册！)');
                         }
                     });
