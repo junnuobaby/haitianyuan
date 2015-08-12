@@ -36,7 +36,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- 会员个人资料完善 -->
                         <div role="tabpanel" class="tab-pane active" id="user" aria-labelledby="user-tab">
                             <div class="col-md-5 col-md-offset-2">
-                                <form action="#" method="post">
+                                <?php echo form_open( base_url('/index.php/register/add_user_info')); ?>
                                     <br/>
 
                                     <div class="form-group has-feedback">
@@ -75,7 +75,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <!-- 理财师个人资料完善 -->
                         <div role="tabpanel" class="tab-pane" id="adviser" aria-labelledby="adviser-tab">
                             <div class="col-md-5 col-md-offset-2 ">
-                                <form>
+                                    <?php echo form_open( base_url('/index.php/register/add_master_info')); ?>
                                     <br/>
 
                                     <div class="form-group has-feedback">
@@ -129,6 +129,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                         <label for="exampleInputFile">身份证照片 <span class="key_info">*</span></label>
                                         <input type="file" id="master_idc_pic" name="master_idc_pic" required
                                                onchange="readFile(this)">
+                                        <input type="hidden" id="base64_pic" name="base64_pic">
 
                                         <p class="help-block">请上传你的身份证正面照片</p>
                                     </div>
