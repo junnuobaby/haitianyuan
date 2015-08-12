@@ -5,6 +5,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="zh-cn">
 <?php $this->load->view('./templates/head'); ?>
 <body>
+
+<script  src="<?php echo base_url('/assets/js/htyjs/register_user_info.js') ?>"></script>
 <div class="wrapper">
     <?php $this->load->view('./templates/navbar'); ?>
     <?php $this->load->view('./templates/jumptron'); ?>
@@ -64,7 +66,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                 <p><strong>1.</strong> 带 <span class="key_info">*</span> 号为必填项</p>
 
-                                <p><strong>2. </strong>为正常使用，请使用国内邮箱。</p>
+                                <p><strong>2. </strong>用户名可以为中文，字母，数字和下划线的组成，但不能以数字开头。</p>
+
+                                <p><strong>3. </strong>为正常使用，请使用国内邮箱。</p>
                             </div>
 
                         </div>
@@ -114,7 +118,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                               aria-hidden="true"></span>
                                     </div>
                                     <div class="form-group has-feedback">
-                                        <label for="id_code">身份证号码 <span class="key_info">*</span></label>
+                                        <label for="id_code">身份证号码 <span class="key_info">*</span></label><label
+                                            id="master_idc_error" style="color: red"></label>
                                         <input type="text" class="form-control" id="master_idc" name="master_idc"
                                                placeholder="身份证号码" required>
                                         <span class="glyphicon glyphicon-eye-open form-control-feedback"
@@ -138,13 +143,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
                                 <p><strong>1.</strong> 带 <span class="key_info">*</span> 号为必填项</p>
 
-                                <p><strong>2. </strong>为正常使用，请使用国内邮箱。</p>
+                                <p><strong>2. </strong>用户名可以为中文，字母，数字和下划线的组成，但不能以数字开头。</p>
 
-                                <p><strong>3.</strong> 机构和资格证号码为选填。</p>
+                                <p><strong>3. </strong>为正常使用，请使用国内邮箱。</p>
 
-                                <p><strong>4.</strong> 请上传身份证正面照。</p>
+                                <p><strong>4.</strong> 机构和资格证号码为选填。</p>
 
-                                <p><strong>5. </strong>我们确保不会泄露您的个人信息。</p>
+                                <p><strong>5.</strong> 请上传身份证正面照。</p>
+
+                                <p><strong>6. </strong>我们确保不会泄露您的个人信息。</p>
 
                             </div>
 
@@ -157,67 +164,5 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!--.wrapper-->
 <?php $this->load->view('./templates/footer'); ?>
-<script type="text/javascript">
-    //    $(document).ready(function(){
-    //        $(function () {
-    //            $('[data-placement="top"]').popover()
-    //        })
-    //    });
-
-
-    function readFile(obj) {
-        var file = obj.files[0];
-        //判断类型是不是图片
-        if (!/image\/\w+/.test(file.type)) {
-            alert("请确保文件为图像类型");
-            return false;
-        }
-        var reader = new FileReader();
-        reader.readAsDataURL(file);
-        reader.onload = function (e) {
-            alert(this.result); //就是base64
-
-        }
-    }
-
-
-    $('#myTabs a').click(function (e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
-
-//onfocus触发时，隐藏提示语
-    function hide_tips(id) {
-        $('#' + id + '_error').html('');
-    }
-
-    //    用户名格式验证，用户名可以为中文，字母，数字和下划线的组成，但不能以数字开头
-    function validate_id(field, id) {
-        with (field) {
-            var result = new RegExp("^[a-zA-Z\u4e00-\u9fa5][0-9a-zA-Z\u4e00-\u9fa5]*");
-            if (!result.test(value)) {
-                $('#' + id + '_error').html('(用户名格式错误！)');
-            }
-            else {
-                $('#' + id + '_error').html('');
-            }
-        }
-    }
-
-
-    //    e-mail 格式验证
-    function validate_email(field, id) {
-        apos = field.value.indexOf("@");
-        dotpos = field.value.lastIndexOf(".");
-        if (apos < 1 || dotpos - apos < 2) {
-            $('#' + id + '_email_error').html('(邮箱格式错误！)');
-        }
-        else {
-            $('#' + id + '_email_error').html('');
-        }
-    }
-
-
-</script>
 </body>
 </html>
