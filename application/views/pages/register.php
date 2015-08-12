@@ -104,6 +104,20 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         }
     }
     $(document).ready(function () {
+
+        var user_mobile = $('#user_mobile');
+
+        //输入手机号时设置发送验证码按钮为不可用状态
+        user_mobile.focus(function(){
+            $('#send_code').attr("disabled","disabled");
+        });
+        user_mobile.blur(function(){
+            if(user_mobile.val().length == 11){
+                $('#send_code').removeAttr('disabled');}
+        });
+
+
+        //发送手机验证码
         send_code.click(function () {
             if (!count_down) {
                 var xmlhttp = new XMLHttpRequest();
@@ -115,7 +129,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         });
 
         //    检查用户输入的手机号码是否已经被注册
-        $('#user_mobile').blur(
+        user_mobile.blur(
 
             function () {
                 var phone_num = $('#user_mobile').val();
@@ -134,11 +148,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     });
 
 
-
     //检查手机号码的合法性，长度为11位
     function validate_phone(field, id) {
         with (field) {
-            if (value.length != 11) {
+            re =  /1[3458]{1}\d{9}$/;
+            legal = re.test(value);
+//            alert(legal);
+            if (value.length != 11 || !legal) {
                 $('#' + id + '_error').html('(请输入11位有效手机号码！)');
             }
             else {
