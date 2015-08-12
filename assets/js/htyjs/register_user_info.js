@@ -14,8 +14,10 @@ function readFile(obj) {
     reader.readAsDataURL(file);
     reader.onload = function (e) {
         alert(this.result); //就是base64
+        $('#base64_pic').val(this.result);
 
     }
+
 }
 
 
@@ -23,6 +25,7 @@ $('#myTabs a').click(function (e) {
     e.preventDefault()
     $(this).tab('show')
 })
+
 
 //onfocus触发时，隐藏提示语
 function hide_tips(id) {
