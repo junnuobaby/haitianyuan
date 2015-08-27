@@ -53,7 +53,7 @@ a:hover {
     margin-bottom: 0;
 }
 
-.thumbnail {
+.index-thumbnail {
     height: 400px;
 }
 
@@ -106,7 +106,7 @@ a:hover {
     margin-right: 1em;
 }
 .dropdown-menu-profile{
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(253, 232, 211, 0.8);
 }
 
 .dropdown-menu-profile-item{
@@ -117,3 +117,108 @@ a:hover {
 .profile-thumbnail{
     border: 0px;
 }
+
+#contact-us h1{
+    color: #c1837b;
+}
+
+#contact-us li{
+    font-size: 20px;
+
+}
+
+#navbar-username, #navbar-menu{
+    color: #fd7d56;
+}
+.dropdown li a:hover{
+    color: #32c12d;
+}
+
+.profile-sidebar{
+    padding: 10px 0 10px 0;
+    background-color: #f8f8f8;
+}
+
+.profile-userpic img {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    width: 50%;
+    height: 50%;
+    -webkit-border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    border-radius: 50% !important;
+}
+
+.profile-usermenu{
+    margin-top: 10px;
+}
+.profile-usermenu ul li{
+   padding:0;
+}
+.profile-usermenu li h4 {
+    color: #f4645f;
+    border-bottom: 1px solid #ebebeb;
+}
+
+
+.profile-usermenu ul li a {
+    color: #8d9cae;
+    font-size: 14px;
+    font-weight: 400;
+    border: none;
+    padding-left: 60px;
+}
+
+.profile-usermenu ul li i {
+    margin-left: 8px;
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.profile-usermenu ul li a:hover {
+    background-color: #f4645f;
+    color: #ffffff;
+}
+
+.master-profile-panel .form-group{
+    margin-left: 20px;
+    width: 400px;
+    margin-bottom: 20px;
+
+}
+
+a.basic-info-a{
+    color: #f4645f;
+}
+.self-btn-danger{
+    background-color: #f4645f;
+}
+.input-group-verification{
+    width: 300px;
+}
+#display_avater_block{
+    margin: 50px;
+    width: auto;
+    height: auto;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

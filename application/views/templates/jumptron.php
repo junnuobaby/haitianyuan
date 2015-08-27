@@ -2,7 +2,7 @@
 <div class="jumbotron">
     <div class="container">
         <br/><br/><br/>
-        <img src="<?php echo base_url('/assets/images/logo.png'); ?>" alt="Logo加载中...">
+<!--        <img src="--><?php //echo base_url('/assets/images/logo.png'); ?><!--" alt="Logo加载中...">-->
         <img src="<?php echo base_url('/assets/images/name_logo.png'); ?>" alt="Logo加载中...">
     </div>
 </div>

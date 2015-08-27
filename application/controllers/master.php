@@ -2,7 +2,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class User extends CI_Controller {
+class Master extends CI_Controller {
 
     function __construct()
     {
@@ -13,9 +13,9 @@ class User extends CI_Controller {
     {
     }
 //    注册完成后，加载个人信息
-    public function user_profile()
+    public function master_profile()
     {
-        $this->load->view('pages/user_profile');
+        $this->load->view('master/master_profile');
     }
 
 

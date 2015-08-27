@@ -42,7 +42,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <input type="text" class="form-control" id="verification_code" name="phone_code"
                                        placeholder="输入手机收到的验证码" required>
                                 <span class="input-group-btn">
-                                    <a href="#" id="send_code" class="btn btn-danger btn-a-light">发送验证码</a>
+                                    <button href="#" id="send_code" class="btn btn-danger btn-a-light">发送验证码</button>
                                 </span>
                             </div>
                             <!-- /input-group -->
@@ -156,6 +156,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 //            alert(legal);
             if (value.length != 11 || !legal) {
                 $('#' + id + '_error').html('(请输入11位有效手机号码！)');
+                $('#send_code').attr("disabled","disabled");
             }
             else {
                 $('#' + id + '_error').html('');

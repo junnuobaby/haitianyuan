@@ -1,8 +1,9 @@
 /**
  * Created by tangchaohong on 2015/8/12.
+ * 对用户填写的信息页面内容进行前台验证
  */
 
-
+//处理上传的身份证照片，转为base64
 function readFile(obj) {
     var file = obj.files[0];
     //判断类型是不是图片
@@ -48,9 +49,9 @@ function validate_id(field, id) {
 
 //    e-mail 格式验证
 function validate_email(field, id) {
-    apos = field.value.indexOf("@");
-    dotpos = field.value.lastIndexOf(".");
-    if ((apos < 1 || dotpos - apos < 2) && value.length > 0) {
+    var apos = field.value.indexOf("@");
+    var dotpos = field.value.lastIndexOf(".");
+    if ((apos < 1 || dotpos - apos < 2) && field.value.length > 0) {
         $('#' + id + '_email_error').html('(邮箱格式错误！)');
     }
     else {

@@ -3,10 +3,11 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-12">
-                <span> <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><a href="<?php echo base_url("index.php/about#aboutus"); ?>">关于我们</a></span> |
-                <span><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><a href="<?php echo base_url("index.php/about#contactus"); ?>">联系我们</a></span> |
-                <span><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><a href="<?php echo base_url("index.php/about#help"); ?>">帮助</a></span>
-                <p>Copyright ? 2015-2050 haitianyuan.com, All rights reserved.</p>
+                <span> <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><a href="<?php echo base_url("index.php/info/aboutus"); ?>">关于我们</a></span> |
+                <span><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><a href="<?php echo base_url("index.php/info/contactus"); ?>">联系我们</a></span> |
+                <span><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span><a href="<?php echo base_url("index.php/info/user_help"); ?>">帮助</a></span> |
+                <span><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span><a href="<?php echo base_url("index.php/info/lcs"); ?>">理财师</a></span>
+                <p>Copyright ? 2015-2050 HaiTianHuLian Corparation, All rights reserved.</p>
             </div>
         </div>
     </div>

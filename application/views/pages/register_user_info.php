@@ -6,7 +6,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <?php $this->load->view('./templates/head'); ?>
 <body>
 
-<script  src="<?php echo base_url('/assets/js/htyjs/register_user_info.js') ?>"></script>
+<script  src="<?php echo base_url('/assets/js/htyjs/basic_info_validation.js') ?>"></script>
+
 <div class="wrapper">
     <?php $this->load->view('./templates/navbar'); ?>
     <?php $this->load->view('./templates/jumptron'); ?>
