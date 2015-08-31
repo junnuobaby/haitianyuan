@@ -18,7 +18,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </div>
 
             <div class="col-md-9">
-                <!--                    登陆信息面板-->
+                <!--登陆信息面板-->
                 <div class="panel panel-danger">
                     <div class="panel-heading">更改登陆信息</div>
                     <div class="panel-body master-profile-panel">
@@ -71,34 +71,41 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     </div>
                 </div>
 
-                <!--                    基本信息面板-->
+                <!--基本信息面板-->
                 <div class="panel panel-danger">
                     <div class="panel-heading">更改个人基本信息</div>
                     <div class="panel-body master-profile-panel">
-                        <!--                        上传头像-->
+                        <!--上传头像-->
                         <div>
-                            <p><strong>更换头像(图片文件不能超过1024k)</strong></p>
+                            <form action="http://192.168.0.105/modify_info/do_upload" enctype="multipart/form-data"
+                                  method="post" onsubmit="return checkCoords();">
+                                <p><strong>更换头像(图片文件宽高不得大于500)</strong></p>
+                                <a href="#" class="avatar-upload">
+                                    <input type="file" id="master-profile-avatar"
+                                           name="master-profile-avatar" onchange="read_avatar()">选择文件
+                                </a>
 
-                            <div>
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <input type="file" id="master-profile-avater" name="master-profile-avater">
-                                        </td>
-                                        <td>
-                                            <input type="button" value="确定上传"
-                                                   class="btn btn-warning btn-sm self-btn-danger">
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div id="display_avater_block">
-                                <img id='master-profile-avater-display' class="img-rounded img-responsive"
-                                     name='master-profile-avater-display'
-                                     src="<?php echo base_url('/assets/images/touxiang/6.jpg'); ?>"
-                                     alt="我的头像">
-                            </div>
-
+                                <div id="display_avatar_div">
+                                    <div class="row">
+                                        <!--预览图-->
+                                        <div class="col-md-7">
+                                            <div id="display_avatar_block">
+                                                <img id='master-profile-avatar-display'
+                                                     name='master-profile-avatar-display' alt="..." src="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 表单元素，值为裁剪时获取到的左上角x坐标,y坐标，宽度，高度 -->
+                                    <input type="hidden" id="x" name="x">
+                                    <input type="hidden" id="y" name="y">
+                                    <input type="hidden" id="w" name="w">
+                                    <input type="hidden" id="h" name="h">
+                                    <!--点击按钮提交表单-->
+                                    <button type="submit"
+                                            class="btn btn-warning btn-sm self-btn-danger"> 确定裁剪
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                         <!--使用x-editable修改个人基本信息-->
                         <table class="table">
@@ -160,7 +167,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                    data-title="编辑个人简介" data-emptytext="未填写"></a></td>
                             </tr>
                         </table>
-
                     </div>
                 </div>
             </div>
@@ -169,82 +175,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <!--.wrapper-->
 <?php $this->load->view('./templates/footer'); ?>
-<script>
-    $.fn.editable.defaults.mode = 'inline'; //设置全部使用x-editable的组件均为嵌入形式
-    $(document).ready(function () {
-        $('#master_profile_name').editable();
-        $('#master_profile_company').editable();
-        $('#master_profile_identification').editable();
-        $('#master_profile_truename').editable();
-        $('#master_profile_idcard').editable();
-        //选择性别的x-editable选项
-        $('#master_profile_sex').editable({
-            source: [
-                {value: 1, text: '男'},
-                {value: 2, text: '女'},
-            ]
-        });
-
-        //设置出生日期的x-editable选项
-        $('#master_profile_birthday').editable({
-            format: 'yyyy-mm-dd',
-            viewformat: 'yyyy-mm-dd',
-            datepicker: {
-                weekStart: 1
-            }
-        });
-        //个人简介的x-editable选项
-        $('#master_profile_comments').editable({
-            url: '/post',
-            rows: 5
-        });
-    });
-    //居住地插件初始化
-    AreaSelector().init();
-
-    //    验证手机号码是否为11位以及是否修改手机号码，若是则显示验证输入框和提交按钮
-    function display_phone_block(id) {
-        var txt = $(id).val();
-        var submit_phone_block = $("#submit_phone_block");
-        //若手机号码不足11位，显示警告信息
-        if (txt.length != 11) {
-            $("#master_profile_phone_error").html("(请输入11位手机号码)");
-            return;
-        }
-        //若手机号码为11位且进行了修改
-        if (txt != $(id).data('old')) {
-            submit_phone_block.slideDown("slow");
-        }
-        else if (submit_phone_block.css('display') != 'none') {
-            submit_phone_block.slideUp("slow");
-        }
-    }
-
-    //    验证邮箱格式是否正确，根据是否更改邮箱决定是否显示提交按钮
-    function display_email_block(id) {
-        var email_val = $(id).val();
-        var apos = email_val.indexOf("@");
-        var dotpos = email_val.lastIndexOf(".");
-        var submit_email_block = $("#submit_email_block");
-        //邮箱格式不正确，发出警告
-        if ((apos < 1 || dotpos - apos < 2) && email_val.length > 0) {
-            $('#master_profile_email_error').html('(邮箱格式错误！)');
-            return;
-        }
-        else {
-            $('#master_profile_email_error').html('');
-        }
-        //若更换了邮箱账号，验证该邮箱账号是否和原来一样，不一样就显示提交按钮
-        if (email_val != $(id).data('old')) {
-            submit_email_block.slideDown("slow");
-        }
-        else if (submit_email_block.css('display') != 'none') {
-            submit_email_block.slideUp("slow");
-        }
-    }
-    //头像裁剪插件
-    $("#master-profile-avater-display").Jcrop();
-</script>
 <script src="<?php echo base_url('/assets/js/htyjs/master_profile.js') ?>"></script>
 </body>
 </html>
