@@ -11,6 +11,7 @@
     register 注册页面
     register_user_info 用户注册完跳转至此页面完善个人信息
     login  登陆界面
+    authentication 实名认证页面
 
 3.  info 文件夹下的页面说明 (该文件夹下存放的均为静态的信息页面)
     aboutus 关于我们
@@ -37,9 +38,11 @@ jqury.Jcrop.css Jcrop插件的外部样式文件
 1.htyjs  开发者自定义js文件夹
 general_navbar 用jquery动态设置顶部导航栏的样式
 basic_info_validation 对用户填写的个人信息内容进行前台验证
+master_profile 理财师个人信息修改页面相关的js
 
 2.webjs 网上开源js文件夹
 Region 收集用户居住地的插件
 jquery.Jcrop.js   一个jQuery图像裁剪插件
 
 3.其他均为框架类js文件
+moment.js为x-editable中combodate的外部依赖插件

@@ -55,7 +55,7 @@
         },
         setting: null,
         resetOptions: function (domID, selLevel, data, value) {
-            var G = gid(domID), H;
+            var G = gid(domID);
             var H;
             G.options.length = 0;
             

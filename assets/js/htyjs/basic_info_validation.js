@@ -16,9 +16,7 @@ function readFile(obj) {
     reader.onload = function (e) {
         alert(this.result); //就是base64
         $('#base64_pic').val(this.result);
-
     }
-
 }
 
 

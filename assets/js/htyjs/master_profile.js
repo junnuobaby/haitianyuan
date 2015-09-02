@@ -1,101 +1,57 @@
 /**
  * Created by tch on 2015/8/31.
- * 理财师个人主页的个人资料页面相关js.
+ * 理财师个人主页(master_profile)的个人资料页面相关js.
  */
-
-//设置全部使用x-editable的组件均为嵌入形式
-$.fn.editable.defaults.mode = 'inline';
+//页面初始化，从后台读取个人信息的值并显示
 $(document).ready(function () {
+    //居住地插件初始化
+    AreaSelector().init();
 
-    $('#master_profile_name').editable();
-    $('#master_profile_company').editable();
-    $('#master_profile_identification').editable();
-    $('#master_profile_truename').editable();
-    $('#master_profile_idcard').editable();
-    //选择性别的x-editable选项
-    $('#master_profile_sex').editable({
-        source: [
-            {value: 1, text: '男'},
-            {value: 2, text: '女'},
-        ]
-    });
+    $("#master_profile_phone").val(phone); //设置手机号
+    $("#master_profile_email").val(email); //设置邮箱
+    $("#master_profile_name").html(username); //设置用户名
+    $("#master_profile_sex").html(gender); //设置性别
+    $("#master_profile_birthday").html(birthday); //设置生日
+    $("#master_profile_company").html(institue); //设置机构名称
+    $("#master_profile_identification").html(qualification); //设置资格证号
+    $("#master_profile_comments").html(signature); //设置个人简介
+    // 初始化省份、城市、地区
+    AreaSelector().initProvince(province, city, county);
+});
 
-    //设置出生日期的x-editable选项
-    $('#master_profile_birthday').editable({
-        format: 'yyyy-mm-dd',
-        viewformat: 'yyyy-mm-dd',
-        datepicker: {
-            weekStart: 1
+//发送验证码按钮倒计时一分钟
+var second = 59;
+var speed = 1000;
+var send_code = $('#send_code');
+var count_down = false;
+function countDown(seconds, speed) {
+    var txt = '倒计时 ' + ((seconds < 10) ? "0" + seconds : seconds) + ' 秒';
+    send_code.html(txt);
+    send_code.attr('disabled', 'disabled');
+    count_down = true;
+    var timeId = setTimeout("countDown(second--,speed)", speed);
+    if (seconds == 0) {
+        clearTimeout(timeId);
+        send_code.html('获取验证码');
+        send_code.removeAttr('disabled');
+        second = 59;
+        count_down = false;
+    }
+}
+$(document).ready(function () {
+    //发送手机验证码
+    send_code.click(function () {
+        if (!count_down) {
+            var xmlhttp = new XMLHttpRequest();
+            var phone_number = $("#user_mobile").val();
+            xmlhttp.open("GET", '<?php echo base_url("index.php/register/send_code/")?>' + '/web/' + phone_number, true);
+            xmlhttp.send();
+            countDown(second, speed);
         }
-    });
-    //个人简介的x-editable选项
-    $('#master_profile_comments').editable({
-        url: '/post',
-        rows: 5
     });
 });
-//居住地插件初始化
-AreaSelector().init();
 
-//显示预览图片
-function read_avatar() {
-    var display_avatar_div = $("#display_avatar_div");
-    var obj = document.getElementById('master-profile-avatar');
-    var file = obj.files[0];
-    var reader = new FileReader();
-    //判断类型是不是图片
-    if (!/image\/\w+/.test(file.type)) {
-        alert("请确保文件为图像类型");
-        return false;
-    }
-    reader.onload = function (e) {
-
-
-        $('#display_avatar_block').html('<img id="master-profile-avatar-display" class=" img-responsive"' +
-            'name="master-profile-avatar-display"' +
-            'src="' + e.target.result + '" alt="我的头像">');
-        $("#master-profile-avatar-display").Jcrop({
-            aspectRatio: 1,
-            onSelect: updateCoords,
-            minSelect: [32,32], //选框最小选择尺寸。说明：若选框小于该尺寸，则自动取消选择
-            maxSize: [300,300], //选框最大尺寸
-        });
-        //判断上传的图片文件宽高是否超过限制
-        var img = document.getElementById('master-profile-avatar-display');
-        var avatar_width = img.width;
-        var avatar_height = img.height;
-        if (avatar_width > 500){
-            alert("您上传的文件过宽，不得超过500px，请重新选择");
-            return false;
-        }
-        if (avatar_height > 500){
-            alert("您上传的文件过高，不得超过500px，请重新选择");
-            return false;
-        }
-        if (display_avatar_div.css('display') === 'none') {
-            display_avatar_div.slideDown("slow");
-        }
-
-    };
-    reader.readAsDataURL(file);
-}
-
-//当裁剪框变动时,将左上角相对图片的X坐标与Y坐标,宽度以及高度放到<input type="hidden">中(上传到服务器上裁剪会用到)
-function updateCoords(c) {
-    $('#x').val(c.x);
-    $('#y').val(c.y);
-    $('#w').val(c.w);
-    $('#h').val(c.h);
-}
-function checkCoords(){
-    if (parseInt($('#w').val())) {
-        return true;
-    };
-    alert('请先选择要裁剪的区域后，再提交。');
-    return false;
-};
-
-//验证手机号码是否为11位以及是否修改手机号码，若是则显示验证输入框和提交按钮
+//验证手机号码是否为11位以及是否修改手机号码，若满足条件则显示验证输入框和提交按钮
 function display_phone_block(id) {
     var txt = $(id).val();
     var submit_phone_block = $("#submit_phone_block");
@@ -104,6 +60,15 @@ function display_phone_block(id) {
         $("#master_profile_phone_error").html("(请输入11位手机号码)");
         return;
     }
+    //若手机号码已经被注册，显示警告信息
+    $.get("<?php  echo base_url('/index.php/register/is_exist/web/')?>" + '/' + txt,
+        function (data, status) {
+            if (data == 'true') {
+                $('#master_profile_phone_error').html('(该号码已注册！)');
+                return false;
+            }
+        });
+
     //若手机号码为11位且进行了修改
     if (txt != $(id).data('old')) {
         submit_phone_block.slideDown("slow");
@@ -113,7 +78,7 @@ function display_phone_block(id) {
     }
 }
 
-//    验证邮箱格式是否正确，根据是否更改邮箱决定是否显示提交按钮
+//验证邮箱格式是否正确，根据是否更改邮箱决定是否显示提交按钮
 function display_email_block(id) {
     var email_val = $(id).val();
     var apos = email_val.indexOf("@");
@@ -135,3 +100,139 @@ function display_email_block(id) {
         submit_email_block.slideUp("slow");
     }
 }
+
+
+//设置全部使用x-editable的组件均为嵌入形式
+$.fn.editable.defaults.mode = 'popup';
+$(document).ready(function () {
+
+    $('#master_profile_name').editable();
+    $('#master_profile_company').editable();
+    $('#master_profile_identification').editable();
+    $('#master_profile_truename').editable();
+    $('#master_profile_idcard').editable();
+    //选择性别的x-editable选项
+    $('#master_profile_sex').editable({
+        source: [
+            {value: 1, text: '男'},
+            {value: 2, text: '女'},
+        ]
+    });
+
+    //设置出生日期的x-editable选项
+    $('#master_profile_birthday').editable({
+        format: 'yyyy-mm-dd',
+        viewformat: 'yyyy-mm-dd',
+        template: 'YYYY /MMMM / D',
+        combodate: {
+            minYear: 1920,
+            maxYear: 2015,
+            minuteStep: 1
+        }
+    });
+    //个人简介的x-editable选项
+    $('#master_profile_comments').editable({
+        url: '/post',
+        rows: 5
+    });
+});
+
+//显示头像预览图片
+function read_avatar() {
+    var display_avatar_div = $("#display_avatar_div");
+    var obj = document.getElementById('master-profile-avatar');
+    var file = obj.files[0];
+    var reader = new FileReader();
+    //判断类型是不是图片
+    if (!/image\/\w+/.test(file.type)) {
+        alert("请确保文件为图像类型");
+        return false;
+    }
+    reader.onload = function (e) {
+
+
+        $('#display_avatar_block').html('<img id="master-profile-avatar-display" class=" img-responsive"' +
+            'name="master-profile-avatar-display"' +
+            ' src="' + e.target.result + '" alt="我的头像">');
+        $("#master-profile-avatar-display").Jcrop({
+            aspectRatio: 1,
+            onSelect: updateCoords,
+            minSelect: [32, 32], //选框最小选择尺寸。说明：若选框小于该尺寸，则自动取消选择
+            maxSize: [300, 300], //选框最大尺寸
+        });
+        //判断上传的图片文件宽高是否超过限制
+        var img = document.getElementById('master-profile-avatar-display');
+        var avatar_width = img.width;
+        var avatar_height = img.height;
+        if (avatar_width > 500) {
+            alert("您上传的文件过宽，不得超过500px，请重新选择");
+            return false;
+        }
+        if (avatar_height > 500) {
+            alert("您上传的文件过高，不得超过500px，请重新选择");
+            return false;
+        }
+        if (display_avatar_div.css('display') === 'none') {
+            display_avatar_div.slideDown("slow");
+        }
+
+    };
+    reader.readAsDataURL(file);
+}
+
+//当裁剪框变动时,将左上角相对图片的X坐标与Y坐标,宽度以及高度放到<input type="hidden">中(上传到服务器上裁剪会用到)
+function updateCoords(c) {
+    $('#x').val(c.x);
+    $('#y').val(c.y);
+    $('#w').val(c.w);
+    $('#h').val(c.h);
+}
+function checkCoords() {
+    if (parseInt($('#w').val())) {
+        return true;
+    }
+    alert('请先选择要裁剪的区域后，再提交。');
+    return false;
+}
+
+//检查密码是否合法,密码长度6-50位
+function validate_pwd(id) {
+    var value = $(id).val();
+    if (value.length < 6 || value.length > 32) {
+        $('#pwd_error_msg').html('(请输入6~32位密码！)');
+        return false;
+    }
+    else {
+        $('#pwd_error_msg').html('');
+        return true;
+    }
+
+}
+
+//检查第二次输入的密码是否和第一次一样
+function validate_pwdconf(id) {
+    var value = $(id).val();
+    if (value != $('#new_pwd').val()) {
+        $('#pwd_error_msg').html('(两次输入不一致！)');
+        return false
+    }
+    else {
+        $('#pwd_error_msg').html('');
+        return true;
+    }
+}
+
+$(document).ready(function () {
+    $('#pwd_form').submit(function(){
+        if(validate_pwd('#new_pwd') && validate_pwd('#conf_pwd')){
+            if(!validate_pwdconf('#conf_pwd')){
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    });
+});
+
+

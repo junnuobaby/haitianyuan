@@ -185,9 +185,7 @@ a:hover {
     margin-left: 20px;
     width: 400px;
     margin-bottom: 20px;
-
 }
-
 a.basic-info-a{
     color: #f4645f;
 }
@@ -204,14 +202,26 @@ a.basic-info-a{
     line-height: 20px;
     position: relative;
     cursor: pointer;
-    color: #888;
-    background: #fafafa;
+    color: #ffffff;
+    background: #f4645f;
     border: 1px solid #ddd;
     border-radius: 4px;
     overflow: hidden;
     display: inline-block;
     *display: inline;
     *zoom: 1
+}
+a.avatar-upload:link{
+    color: #ffffff;
+}
+a.avatar-upload:visited{
+    color: #ffffff;
+}
+a.avatar-upload:hover{
+    color: #ffffff;
+    background: #a62b2b;
+    border-color: #ccc;
+    text-decoration: none
 }
 .avatar-upload input{
     position: absolute;
@@ -221,12 +231,6 @@ a.basic-info-a{
     opacity: 0;
     filter: alpha(opacity=0);
     cursor: pointer
-}
-.avatar-upload:hover{
-    color: #444;
-    background: #eee;
-    border-color: #ccc;
-    text-decoration: none
 }
 #display_avatar_block{
     margin: 20px 20px;
@@ -239,8 +243,9 @@ a.basic-info-a{
     margin-left:20px;
     margin-bottom: 10px;
 }
-
-
+.self_master_address{
+    color: #f4645f;
+}
 
 
 

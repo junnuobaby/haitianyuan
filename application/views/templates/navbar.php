@@ -83,7 +83,7 @@
                                 我的空间<span class="caret"></span></a>
 
                             <ul class="dropdown-menu">
-                                <li><a href="#">我的主页</a></li>
+                                <li><a href="<?php echo base_url("index.php/master/master_profile"); ?>">我的主页</a></li>
                                 <li><a href="#">我的订单</a></li>
                                 <li><a href="#">我的私信</a></li>
                                 <li><a href="#">我的收藏</a></li>

@@ -12,4 +12,8 @@ class Index extends CI_Controller {
 	{
 		$this->load->view('pages/index');
 	}
+    public function authentication()
+    {
+        $this->load->view('pages/authentication');
+    }
 }
