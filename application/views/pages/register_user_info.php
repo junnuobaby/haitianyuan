@@ -156,7 +156,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <p><strong>6. </strong>我们确保不会泄露您的个人信息。</p>
 
                             </div>
-
                         </div>
                     </div>
                 </div>
