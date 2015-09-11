@@ -1,7 +1,8 @@
 <!--理财师个人信息管理页面-->
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html lang="zh-cn">
 <?php $this->load->view('./templates/head'); ?>
 <body>
@@ -11,20 +12,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="<?php echo base_url('/assets/js/webjs/jquery.Jcrop.js') ?>"></script>
 <script src="<?php echo base_url('/assets/js/moment.js') ?>"></script>
 <?php
-//$uuid = $this->session->userdata('uuid');//从session获取用户id
-//$basic_info = $this->session->userdata($uuid);//通过用户Id获取用户基本信息
+//$basic_info = $this->session->userdata($uuid);//通过session获取自己基本信息
 $basic_info = array(
-    "mobile" => "15889506075",
-    "email" => "ictxiangxin@hotmail.com",
     "username" => "开普勒",
     "gender" => "男",
     "birthday" => "1949-10-1",
     "institue" => "白宫",
     "qualification" => "00000000000",
-    "signature" => "唯我独尊",
-    "location" => "1-1-4"
-);
+    "signature" => "生活源于自然,成功源于专业,理财源于全面,具备全面的金融理财学识,精通投资策略分析和资产配置",
+    "location" => "1-1-4",
+    "email" => "444092487@qq.com",
+    "mobile" => "18244288433"
 
+);
 $user_address = explode('-', $basic_info['location']); //分割地址，得到省份/市/县
 ?>
 <div class="wrapper">
@@ -52,6 +52,7 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
                                 <!--修改手机号码-->
                                 <form>
                                     <input type="hidden" name="name" value="mobile">
+
                                     <div class="form-group">
                                         <label for="master_profile_phone">手机号码</label>
                                         <label id="master_profile_phone_error" style="color: red"></label>
@@ -83,6 +84,7 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
                                 <!--修改邮箱-->
                                 <form>
                                     <input type="hidden" name="name" value="email">
+
                                     <div class="form-group">
                                         <label for="master_profile_email">邮箱</label>
                                         <label id="master_profile_email_error" style="color: red"></label>
@@ -102,8 +104,10 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
                             <div role="tabpanel" class="tab-pane" id="pwd_panel">
                                 <form id="pwd_form" class="form-horizontal">
                                     <input type="hidden" name="name" value="password">
+
                                     <div class="form-group">
                                         <label for="old_pwd" class="col-sm-4 col-md-4 control-label">旧的登录密码</label>
+
                                         <div class="col-sm-8 col-md-8">
                                             <input type="password" class="form-control" id="old_pwd">
                                             <a class="basic-info-a" href="#">(忘记密码)</a>
@@ -111,12 +115,14 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
                                     </div>
                                     <div class="form-group">
                                         <label for="new_pwd" class="col-sm-4 col-md-4 control-label">新密码</label>
+
                                         <div class="col-sm-8 col-md-8">
                                             <input type="password" class="form-control" id="new_pwd">
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="repeat_pwd" class="col-md-4 col-sm-4 control-label">再次输入新密码</label>
+
                                         <div class="col-sm-8 col-md-8">
                                             <input type="password" class="form-control" id="conf_pwd">
                                         </div>
@@ -135,7 +141,7 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
 
                 <!--基本信息面板-->
                 <div class="panel panel-danger">
-                    <div class="panel-heading">更改个人基本信息</div>
+                    <div class="panel-heading">更改个人基本信息(点击即可修改)</div>
                     <div class="panel-body master-profile-panel">
                         <!--上传头像-->
                         <div>
@@ -198,6 +204,7 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
                                     <!-- 居住地信息以form形式提交-->
                                     <form>
                                         <input type="hidden" name="name" value="location">
+
                                         <div class="self_master_address">
                                             <span>*</span> 省
                                             <select id="sel_Province" style="width:80px" name="sel_Province"></select>

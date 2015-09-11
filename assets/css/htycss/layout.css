@@ -1,74 +1,16 @@
 /*用户自定义CSS*/
-html {
-    height: 100%;
-    margin: 0;
-}
-
-body
-{
-    height: 100%;
-    margin: 0;
-    overflow: -moz-scrollbars-vertical;
-    font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
-}
-
-.ict-panel-heading {
-    padding: 10px 15px;
-    border-bottom: 0 solid transparent;
-    border-top: 4px solid #9fdda7;
-}
-
-a:link {
-    color: #434449;
-}
-
-a:visited {
-    color: #434449;
-}
-
-a:hover {
-    color: #434449;
-}
-
-.copyright {
-    font-size: 13px;
-    text-align: center;
-    color: #555555;
-    padding-top: 5px;
-    padding-bottom: 0;
-    height: 4em;
-    background-color: #ffffff;
-
-}
-.copyright span {
-    margin: 0.5em;
-}
-.copyright a {
-    color: #555555;
-}
-
-.wrapper {
-    min-height: 100%;
-    margin: 0 auto -4em;
-    margin-bottom: 0;
-}
-
 .index-thumbnail {
     height: 400px;
 }
-
 .carousel-control.right{
     background-image:linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%)
 }
 .carousel-control.left{
     background-image:linear-gradient(to right,rgba(0,0,0,0) 0,rgba(0,0,0,0) 100%)
-
 }
-
 .carousel_style{
     max-height: 200px;
 }
-
 .register_input{
     padding-bottom: 0.5em;
 }
@@ -86,18 +28,15 @@ a:hover {
 #info_dropdown{
     width: 300px;
 }
-
 .info_dropdown_menu{
     min-width: 300px;
 }
-
 .btn-a-light:link,
 .btn-a-light:visited,
 .btn-a-light:hover,
 .btn-a-light:active{
     color: white;
 }
-
 .login_form{
     padding-top: 4em;
 }
@@ -108,7 +47,6 @@ a:hover {
 .dropdown-menu-profile{
     background-color: rgba(253, 232, 211, 0.8);
 }
-
 .dropdown-menu-profile-item{
     width:1px;
     border:1px solid black;
@@ -117,28 +55,16 @@ a:hover {
 .profile-thumbnail{
     border: 0px;
 }
-
-#contact-us h1{
-    color: #c1837b;
-}
-
-#contact-us li{
-    font-size: 20px;
-
-}
-
 #navbar-username, #navbar-menu{
     color: #fd7d56;
 }
 .dropdown li a:hover{
     color: #32c12d;
 }
-
 .profile-sidebar{
     padding: 10px 0 10px 0;
     background-color: #f8f8f8;
 }
-
 .profile-userpic img {
     float: none;
     margin: 0 auto;
@@ -149,7 +75,6 @@ a:hover {
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
 }
-
 .profile-usermenu{
     margin-top: 10px;
 }
@@ -160,8 +85,6 @@ a:hover {
     color: #f4645f;
     border-bottom: 1px solid #ebebeb;
 }
-
-
 .profile-usermenu ul li a {
     color: #8d9cae;
     font-size: 14px;
@@ -169,18 +92,15 @@ a:hover {
     border: none;
     padding-left: 60px;
 }
-
 .profile-usermenu ul li i {
     margin-left: 8px;
     margin-right: 8px;
     font-size: 14px;
 }
-
 .profile-usermenu ul li a:hover {
     background-color: #f4645f;
     color: #ffffff;
 }
-
 .master-profile-panel .form-group{
     margin-left: 20px;
     width: 400px;
@@ -188,9 +108,6 @@ a:hover {
 }
 a.basic-info-a{
     color: #f4645f;
-}
-.self-btn-danger{
-    background-color: #f4645f;
 }
 .input-group-verification{
     width: 300px;
@@ -238,7 +155,6 @@ a.avatar-upload:hover{
 #display_avatar_div{
     display: none;
 }
-
 #display_avatar_div button{
     margin-left:20px;
     margin-bottom: 10px;
@@ -246,13 +162,140 @@ a.avatar-upload:hover{
 .self_master_address{
     color: #f4645f;
 }
+.master_homepage_jumptron{
+    height: 380px;
+    background-color: #e2e2e2;
+}
+.master_homepage_jumptron_div{
+    margin-top: 150px;
+}
+/*理财师个人主页头像样式*/
+.avatar_box{
+    width: 150px;
+    height: auto;
+    border:solid 5px white;
+    overflow: hidden;
+}
+.master_homepage_jumptron_div .online_status{
+    width: 150px;
+    height: 30px;
+    background-color: white;
+    border:solid 1px white;
+    overflow: hidden;
+}
+.master_homepage_subnav{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+#master_homepage_menu ul li:hover{
+    background-color: #f4645f;
+}
+#master_homepage_menu ul li a:hover{
+    color: #ffffff;
+}
+/*购买会员页面css样式*/
+.vip_price_body{
+    background-color:#e2e2e2;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#vip_price h1.slogan {
+    margin: 100px auto 150px auto;
+    color: #f4645f;
+    font-size: 50px;
+    text-shadow: 3px 3px 5px #cccccc;
+}
+#vip_price div.box{
+    height: 400px;
+    width: 280px;
+    background-color: #f4645f;
+    border: solid 5px #f4645f;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px #aaaaaa;
+}
+#vip_price div.box .content{
+    height:321px;
+    background-color: white;
+    border-radius: 5px;
 
-
-
-
-
-
-
+}
+#vip_price .box .vip_category h3{
+    color: white;
+    font-size: 35px;
+}
+#vip_price .box .price_box{
+    height: 150px;
+    background-color: #f5f5f5;
+    box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1px solid #c5c5c5;
+}
+#vip_price .box .price_box .price {
+    display: inline-block;
+    font-size: 50px;
+    margin:10px;
+}
+#vip_price .box .price_box .price small{
+    font-size: 18px;
+    float: left;
+    margin-top: 10px;
+}
+#vip_price .box .price_box .duration {
+    font-size: 18px;
+    width: 100px;
+    margin: 0 auto 10px auto;
+    background-color: #e8e8e8;
+    padding: 3px;
+    border-radius: 50px;
+}
+#vip_price .box .price_box .pay.btn{
+    padding-left: 30px;
+    padding-right: 30px;
+    width: 200px;
+    background-color:#f4645f;
+    border-radius: 50px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: -20px;
+}
+#vip_price .box ul.features{
+    background-color: white;
+    list-style: none;
+    margin: 50px auto 0 30px;
+    text-align: left;
+}
+#vip_price .box ul.features i{
+    color: #f4645f;
+    margin-right: 10px;
+}
+/*左侧边栏*/
+.side-bar .widget{
+    padding: 20px 30px;
+    margin: 20px 0px 20px 20px;
+    background-color:#f9f9f9;
+}
+.side-bar .widget .title{
+    margin-top: 0;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #dedede;
+    margin-bottom: 21px;
+    position: relative;
+}
+.side-bar .widget.hot-topics .content ul{
+    padding-left: 0;
+    list-style-type:none;
+}
+.side-bar .widget.hot-topics .content ul li{
+    padding-bottom: 10px;
+}
+/*问答对样式*/
+.q_a {
+    margin-bottom: 30px;
+}
+.q_a footer span {
+    margin-right: 10px;
+    float: right;
+}
 
 
 

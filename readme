@@ -29,8 +29,11 @@
 
 
 二. assets/css/文件夹
-extends.css 自定义样式文件
-jqury.Jcrop.css Jcrop插件的外部样式文件
+1.htycss
+layout.css 自定义样式文件
+global.css 网站公用基本样式
+forms.css 表单样式
+2.jqury.Jcrop.css Jcrop插件的外部样式文件
 其他均为外部css样式文件
 
 

@@ -104,19 +104,29 @@ function display_email_block(id) {
 
 //设置全部使用x-editable的组件均为嵌入形式
 $.fn.editable.defaults.mode = 'popup';
+function success (response, newValue){
+    if(!response.success) {
+        return response.msg;
+    }
+}
+function error (response, newValue) {
+    return '服务器故障。';
+}
 $(document).ready(function () {
 
-    $('#master_profile_name').editable();
-    $('#master_profile_company').editable();
-    $('#master_profile_identification').editable();
-    $('#master_profile_truename').editable();
-    $('#master_profile_idcard').editable();
+    $('#master_profile_name').editable({success: success, error: error});
+    $('#master_profile_company').editable({success: success, error: error});
+    $('#master_profile_identification').editable({success: success, error: error});
+    $('#master_profile_truename').editable({success: success, error: error});
+    $('#master_profile_idcard').editable({success: success, error: error});
     //选择性别的x-editable选项
     $('#master_profile_sex').editable({
         source: [
             {value: 1, text: '男'},
             {value: 2, text: '女'},
-        ]
+        ],
+        success: success,
+        error: error
     });
 
     //设置出生日期的x-editable选项
@@ -128,12 +138,16 @@ $(document).ready(function () {
             minYear: 1920,
             maxYear: 2015,
             minuteStep: 1
-        }
+        },
+        success: success,
+        error: error
     });
     //个人简介的x-editable选项
     $('#master_profile_comments').editable({
         url: '/post',
-        rows: 5
+        rows: 5,
+        success: success,
+        error: error
     });
 });
 
