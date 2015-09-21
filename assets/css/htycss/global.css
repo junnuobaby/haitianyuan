@@ -1,72 +1,46 @@
 /*基本公用样式*/
-html {
+html{
     height: 100%;
     margin: 0;
 }
 
-body {
+body{
     height: 100%;
     margin: 0;
     overflow: -moz-scrollbars-vertical;
     font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
 }
-a {
+a{
     color: black;
 }
 a:hover{
     text-decoration: none;
-    color:#f4645f;;
+    color:#f4645f;
 }
 .wrapper {
     min-height: 100%;
-    margin: 0 auto -4em;
-    margin-bottom: 0;
+    margin: 0 auto 3em auto;
 }
-.inline-block{
+.inline_block{
     display: inline;
 }
-
-.copyright {
+/*页脚样式*/
+footer.page_footer {
     font-size: 13px;
-    text-align: center;
     color: #555555;
-    padding-top: 5px;
-    padding-bottom: 0;
-    height: 4em;
-    background-color: #ffffff;
+    padding-top: 20px;
+    height: 80px;
+    background-color: #d9d9d9;
+    z-index: 1000;
 }
-
-.copyright span {
+footer.page_footer span {
     margin: 0.5em;
 }
-
-.copyright a {
+footer.page_footer a {
     color: #555555;
 }
-
-#contact-us h1 {
-    color: #c1837b;
-}
-
-#contact-us li {
-    font-size: 20px;
-}
-
-/*网站的主题颜色*/
-.theme-color {
-    color: #f4645f;
-}
-.theme-bg-color {
-    border-color: #f4645f;
-}
-
-.self-btn-danger {
-    background-color: #f4645f;
-}
-
-.answer-font {
-    font-size: 17px;
-    color: #929292;
+footer.page_footer p{
+    margin-top: 10px;
 }
 /*自定义的字体*/
 .self-font {
@@ -74,29 +48,51 @@ a:hover{
     "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW\-Kai", serif;
 }
 /*悬停右下脚的返回顶部和反馈按钮*/
-.fixed-btn {
+.fixed-bar {
     position: fixed;
     right: 1%;
-    bottom: 2%;
+    bottom: 1%;
     width: 40px;
     border: 1px solid #f4645f;
     background-color: white;
     font-size: 24px;
     z-index: 1040;
 }
-.fixed-btn a {
+.fixed-bar a {
     display: block;
     width: 38px;
     height: 40px;
     text-align: center;
 }
-.fixed-btn .go-top {
+.fixed-bar .go-top {
     color: #f4645f;
     padding-top: 5px;
 }
-.fixed-btn .writer {
+.fixed-bar .ht_feedback {
     background-color: #f4645f;
     color: white;
     font-size: 12px;
     padding-top: 10px;
+}
+/*网站的主题颜色*/
+.theme-color {
+    color: #f4645f;
+}
+.theme-bg-color {
+    border-color: #f4645f;
+}
+.self-btn-danger {
+    background-color: #f4645f;
+}
+/*白色背景*/
+.bg-white{
+    background-color: white;
+}
+/*灰色背景*/
+.bg-gray{
+    background-color: #ebebeb;
+}
+/*边框圆角*/
+.block-radius{
+    border-radius: 5px;
 }

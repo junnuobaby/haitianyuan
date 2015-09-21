@@ -9,7 +9,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php $this->load->view('./templates/jumptron'); ?>
     <div class="container">
         <div class="row">
-            <div class="col-md-5" id="contact-us">
+            <div class="col-md-5" id="contact_us">
                 <h1><span class="glyphicon glyphicon-earphone"></span> 联系我们</h1><br/>
                 <ul>
                     <li>地址：深圳市南山区丽山路10号桑泰大厦10层1021</li><br/>
@@ -28,6 +28,4 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <?php $this->load->view('./templates/footer'); ?>
 </body>
-
-
 </html>

@@ -1,4 +1,4 @@
-/*ÓÃ»§×Ô¶¨ÒåCSS*/
+/*ï¿½Ã»ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½CSS*/
 .index-thumbnail {
     height: 400px;
 }
@@ -61,6 +61,7 @@
 .dropdown li a:hover{
     color: #32c12d;
 }
+/*ç†è´¢å¸ˆä¸ªäººä¸­å¿ƒä¾§è¾¹æ */
 .profile-sidebar{
     padding: 10px 0 10px 0;
     background-color: #f8f8f8;
@@ -162,15 +163,48 @@ a.avatar-upload:hover{
 .self_master_address{
     color: #f4645f;
 }
+/*è”ç³»æˆ‘ä»¬é¡µé¢æ ·å¼*/
+#contact_us h1 {
+    color: #c1837b;
+}
+#contact_us li {
+    font-size: 20px;
+}
+/*ç†è´¢å¸ˆä¸ªäººä¸»é¡µé¡µé¢æ ·å¼*/
 .master_homepage_jumptron{
     height: 380px;
     background-color: #e2e2e2;
+    color: #ffffff;
 }
 .master_homepage_jumptron_div{
-    margin-top: 150px;
+    margin-top: 130px;
 }
-/*Àí²ÆÊ¦¸öÈËÖ÷Ò³Í·ÏñÑùÊ½*/
-.avatar_box{
+.master_homepage_jumptron_div table.master_info h4{
+    font-size: 18px;
+}
+.master_homepage_jumptron_div table.master_info h5{
+    font-size: 16px;
+}
+.master_homepage_jumptron_div p.signature{
+    font-size: 18px;
+}
+.master_homepage_jumptron_div a.btn{
+    color: #f56857;
+    background-color: #ffffff;
+    font-weight: 600;
+    border: 1px solid #f1362f;
+    position: relative;
+    margin-top: 10px;
+}
+.master_homepage_jumptron_div a.btn.vip-link{
+    padding: 8px 40px;
+    font-size: 18px;
+    margin-top: 0;
+}
+.master_homepage_jumptron_div a.vip-linkï¼šhover{
+    background-color: transparent;
+}
+.master_homepage_jumptron_div .avatar_box{
     width: 150px;
     height: auto;
     border:solid 5px white;
@@ -183,17 +217,7 @@ a.avatar-upload:hover{
     border:solid 1px white;
     overflow: hidden;
 }
-.master_homepage_subnav{
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-#master_homepage_menu ul li:hover{
-    background-color: #f4645f;
-}
-#master_homepage_menu ul li a:hover{
-    color: #ffffff;
-}
-/*¹ºÂò»áÔ±Ò³ÃæcssÑùÊ½*/
+/*vipè´­ä¹°é¡µé¢*/
 .vip_price_body{
     background-color:#e2e2e2;
     background-size: cover;
@@ -268,11 +292,13 @@ a.avatar-upload:hover{
     color: #f4645f;
     margin-right: 10px;
 }
-/*×ó²à±ßÀ¸*/
+/*å³ä¾§è¾¹æ */
 .side-bar .widget{
     padding: 20px 30px;
-    margin: 20px 0px 20px 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
     background-color:#f9f9f9;
+    border-radius: 5px;
 }
 .side-bar .widget .title{
     margin-top: 0;
@@ -288,14 +314,59 @@ a.avatar-upload:hover{
 .side-bar .widget.hot-topics .content ul li{
     padding-bottom: 10px;
 }
-/*ÎÊ´ğ¶ÔÑùÊ½*/
-.q_a {
-    margin-bottom: 30px;
+/*é—®ç­”å¯¹æ ·å¼*/
+.q_a_container{
+    padding: 10px 30px;
 }
-.q_a footer span {
-    margin-right: 10px;
+.q_a .q_a_question span{
+    border: 1px solid #96cc75;
+    background-color: #96cc75;
+    padding: 4px;
+    color: white;
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+.q_a .q_a_question{
+    line-height: 150%;
+}
+.q_a_hr{
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+.q_a_footer span {
+    margin-right: 50px;
     float: right;
 }
-
+.q_a .q_a_answer{
+    font-size: 16px;
+    color: #929292;
+    margin-top: 10px;
+}
+.q_a_footer{
+    background-color: transparent;
+}
+/*æé—®çš„æ¨¡æ€æ¡†æ ·å¼*/
+#question_modal div.modal-body{
+    padding: 0;
+}
+#question_modal div.panel{
+    margin: 0;
+}
+#question_modal #my_question{
+    width: 100%;
+    border: none;
+}
+/*ç†è´¢å¸ˆä¸»é¡µå†…å®¹æ¿å—æ ·å¼*/
+.master_homepage_container{
+    margin-top: 50px;
+}
+.sub_nav{
+    margin: 10px auto 15px 10px;
+    padding: 10px;
+    font-size: 18px;
+}
 
 
