@@ -79,10 +79,13 @@ footer.page_footer p{
     color: #f4645f;
 }
 .theme-bg-color {
-    border-color: #f4645f;
+    background-color: #f4645f;
 }
 .self-btn-danger {
     background-color: #f4645f;
+}
+.green-color{
+    background-color: #96cc75;
 }
 /*白色背景*/
 .bg-white{
@@ -95,4 +98,7 @@ footer.page_footer p{
 /*边框圆角*/
 .block-radius{
     border-radius: 5px;
+}
+.container_to_top{
+    margin-top: 100px;
 }

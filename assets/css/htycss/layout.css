@@ -318,7 +318,7 @@ a.avatar-upload:hover{
 .q_a_container{
     padding: 10px 30px;
 }
-.q_a .q_a_question span{
+.q_a_span{
     border: 1px solid #96cc75;
     background-color: #96cc75;
     padding: 4px;
@@ -339,6 +339,7 @@ a.avatar-upload:hover{
 .q_a_footer span {
     margin-right: 50px;
     float: right;
+    font-size: 14px;
 }
 .q_a .q_a_answer{
     font-size: 16px;
@@ -368,5 +369,76 @@ a.avatar-upload:hover{
     padding: 10px;
     font-size: 18px;
 }
+div.master_view header h4{
+    font-size: 25px;
+    margin-top: 0;
+}
+div.master_view .view_hr{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+div.master_view section{
+    font-size: 15px;
+    color: #7a7a7a;
+    line-height: 160%;
+}
+.qu_hr{
+    height: 20px;
+    background-color:#f3f3f3 ;
+    margin: 5px 0px;
+}
+
+.key_word{
+    font-size: 12px;
+    background: #f3f3f3;
+    border-radius: 10px;
+    margin: 10px 10px 10px 0;
+    padding: 3px 10px;
+    color: #666;
+}
+.qu_btn{
+    background: #a0d56d;
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    float: right;
+}
+.qu_time{
+    font-size: 14px;
+    color: #999;
+    margin-bottom: 10px;
+}
+.qu_time .questioner{
+    color: #428bca;
+    margin-left: 5px;
+}
+.qu_line_height{
+    line-height: 35px;
+}
+.ta{
+    color: #808080;
+    padding: 8px;
+    font-size: 14px;
+    line-height: 1.6;
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border: 1px solid #ccc;
+    overflow: auto;
+}
+.qu_margin{
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
