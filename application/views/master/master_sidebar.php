@@ -40,9 +40,8 @@ $basic_info = array(
                 <h4><i class="glyphicon glyphicon-edit"></i> 问答管理</h4>
 
                 <div class="list-group">
-                    <a href="#" class="list-group-item">我的提问</a>
-                    <a href="#" class="list-group-item">待回答问题</a>
-                    <a href="#" class="list-group-item">已回答问题</a>
+                    <a href="<?php echo base_url("index.php/master/ques_tobeanswered"); ?>" class="list-group-item">待回答问题</a>
+                    <a href="<?php echo base_url("index.php/master/ques_tobeanswered"); ?>" class="list-group-item">已回答问题</a>
                 </div>
             </li>
             <li class="list-group-item ">

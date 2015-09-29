@@ -2,6 +2,8 @@
  * Created by tch on 2015/8/31.
  * 理财师个人主页(master_profile)的个人资料页面相关js.
  */
+
+
 //页面初始化，从后台读取个人信息的值并显示
 $(document).ready(function () {
     //居住地插件初始化
@@ -16,7 +18,7 @@ $(document).ready(function () {
     $("#master_profile_identification").html(qualification); //设置资格证号
     $("#master_profile_comments").html(signature); //设置个人简介
     // 初始化省份、城市、地区
-    AreaSelector().initProvince(province, city, county);
+    //AreaSelector().initProvince(province, city, county);
 });
 
 //发送验证码按钮倒计时一分钟
@@ -38,18 +40,7 @@ function countDown(seconds, speed) {
         count_down = false;
     }
 }
-$(document).ready(function () {
-    //发送手机验证码
-    send_code.click(function () {
-        if (!count_down) {
-            var xmlhttp = new XMLHttpRequest();
-            var phone_number = $("#user_mobile").val();
-            xmlhttp.open("GET", '<?php echo base_url("index.php/register/send_code/")?>' + '/web/' + phone_number, true);
-            xmlhttp.send();
-            countDown(second, speed);
-        }
-    });
-});
+
 
 //验证手机号码是否为11位以及是否修改手机号码，若满足条件则显示验证输入框和提交按钮
 function display_phone_block(id) {
@@ -131,9 +122,9 @@ $(document).ready(function () {
 
     //设置出生日期的x-editable选项
     $('#master_profile_birthday').editable({
-        format: 'yyyy-mm-dd',
-        viewformat: 'yyyy-mm-dd',
-        template: 'YYYY /MMMM / D',
+        format: 'YYYY-MM-DD',
+        viewformat: 'YYYY/MM/DD',
+        template: 'YYYY/MMMM/D',
         combodate: {
             minYear: 1920,
             maxYear: 2015,
@@ -163,7 +154,6 @@ function read_avatar() {
         return false;
     }
     reader.onload = function (e) {
-
 
         $('#display_avatar_block').html('<img id="master-profile-avatar-display" class=" img-responsive"' +
             'name="master-profile-avatar-display"' +

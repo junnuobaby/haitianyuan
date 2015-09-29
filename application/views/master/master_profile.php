@@ -12,7 +12,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <script src="<?php echo base_url('/assets/js/webjs/jquery.Jcrop.js') ?>"></script>
 <script src="<?php echo base_url('/assets/js/moment.js') ?>"></script>
 <?php
-//$basic_info = $this->session->userdata($uuid);//通过session获取自己基本信息
 $basic_info = array(
     "username" => "开普勒",
     "gender" => "男",
@@ -20,10 +19,10 @@ $basic_info = array(
     "institue" => "白宫",
     "qualification" => "00000000000",
     "signature" => "生活源于自然,成功源于专业,理财源于全面,具备全面的金融理财学识,精通投资策略分析和资产配置",
-    "location" => "1-1-4",
+    "location" => "北京-北京市-东城区",
+//    "location" => "1-1-4",
     "email" => "444092487@qq.com",
     "mobile" => "18244288433"
-
 );
 $user_address = explode('-', $basic_info['location']); //分割地址，得到省份/市/县
 ?>
@@ -75,13 +74,14 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-warning  btn-round self-btn-danger">
+                                            <button type="button" id ="mobile_btn" class="btn btn-warning  btn-round self-btn-danger">
                                                 确定
                                             </button>
                                         </div>
                                     </div>
                                 </form>
                                 <!--修改邮箱-->
+
                                 <form>
                                     <input type="hidden" name="name" value="email">
 
@@ -94,7 +94,7 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
                                                onchange="display_email_block(this)">
                                     </div>
                                     <div id="submit_email_block" class="form-group" style="display: none">
-                                        <button type="submit" class="btn btn-warning  btn-round self-btn-danger">
+                                        <button type="button"  id="email_btn" class="btn btn-warning  btn-round self-btn-danger">
                                             确定
                                         </button>
                                     </div>
@@ -212,7 +212,7 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
                                             <select id="sel_City" name="sel_City"></select>
                                             <span>*</span> 县/区
                                             <select id="sel_County" name="sel_County"></select>
-                                            <button type="submit" class="btn btn-danger btn-xs self-btn-danger">
+                                            <button type="button" id="address_btn" class="btn btn-danger btn-xs self-btn-danger">
                                                 确定
                                             </button>
                                         </div>
@@ -249,6 +249,7 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
 <!--.wrapper-->
 <?php $this->load->view('./templates/footer'); ?>
 <script>
+    console.log(111);
     var phone = '<?php echo $basic_info["mobile"]; ?>'; //从session获取手机号
     var email = '<?php echo $basic_info["email"]; ?>'; //从session获取邮箱号
     var username = '<?php echo $basic_info["username"]; ?>'; //从session获取用户名
@@ -261,7 +262,48 @@ $user_address = explode('-', $basic_info['location']); //分割地址，得到�
     var province = '<?php echo $user_address[0]; ?>'; //获取省份
     var city = '<?php echo $user_address[1]; ?>';     //获取城市
     var county = '<?php echo $user_address[2]; ?>';  //获取县
+
+    $(document).ready(function () {
+
+        //点击修改居住地
+        $('#address_btn').click(function () {
+            var sel_province = $('#sel_Province').val();
+            var sel_city = $('#sel_City').val();
+            var sel_county = $('#sel_County').val();
+            alert(sel_city);
+            $.post('<?php echo base_url("index.php/register/send_code/")?>', {name: 'location',province: sel_province, city: sel_city, county: sel_county});
+        });
+
+        //发送手机验证码
+        send_code.click(function () {
+            if (!count_down) {
+                var xmlhttp = new XMLHttpRequest();
+                var phone_number = $("#mobile").val();
+                xmlhttp.open("GET", '<?php echo base_url("index.php/register/send_code/")?>' + '/web/' + phone_number, true);
+                xmlhttp.send();
+                countDown(second, speed);
+            }
+        });
+
+        //点击确定修改手机号码
+        $('#mobile_btn').click(function () {
+            var phone_num = $('#mobile').val();
+            $.post('<?php echo base_url("index.php/register/send_code/")?>',{name : 'mobile', mobile : phone_num}, function (data, status) {
+                $("#submit_phone_block").slideUp("slow");
+            });
+        });
+        //点击确定修改邮箱
+        $('#email_btn').click(function () {
+            var email_num = $('#email').val();
+            $.post('<?php echo base_url("index.php/register/send_code/")?>',{name : 'email', email : email_num}, function (data, status) {
+                $('#email_btn').slideUp("slow");
+            });
+        });
+    });
+
+
 </script>
 <script src="<?php echo base_url('/assets/js/htyjs/master_profile.js') ?>"></script>
 </body>
 </html>
+
