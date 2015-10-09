@@ -13,7 +13,7 @@ $hot_topic_list = array(
     '大盘直接低开 接下来怎么办'
 );
 ?>
-<!-- 右侧边栏-->
+<!-- 左侧边栏-->
 <div class="col-md-4 col-sm-4 side-bar">
     <div class="widget">
         <a href="<?php echo base_url("index.php/index/authentication"); ?>"><img

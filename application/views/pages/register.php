@@ -70,6 +70,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                    data-content="前后密码输入不一致！">
                             <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
                         </div>
+
                         <button type="submit" class="btn btn-lg btn-block btn-danger">注册</button>
                         </form>
                     </div>
@@ -129,17 +130,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
         //    检查用户输入的手机号码是否已经被注册
         user_mobile.blur(
+
             function () {
                 var phone_num = $('#user_mobile').val();
                 $.get("<?php  echo base_url('/index.php/register/is_exist/web/')?>"+'/' + phone_num ,
                     function (data, status) {
-                        alert(data);
+//                        alert(data);
                         if (data  == 'true'){
+
                             $('#user_mobile_error').html('(该号码已注册！)');
+                            $('#send_code').attr("disabled","disabled");
                         }
                     });
             }
         );
+
+
     });
 
 
@@ -163,7 +169,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     //检查密码是否合法,密码长度6-50位
     function validate_pwd(field, id) {
         with (field) {
-            if (value.length < 6 || value.length > 32) {
+            if (value.length < 6 | value.length > 50) {
                 $('#' + id + '_error').html('(请输入6~32位密码！)');
             }
             else {

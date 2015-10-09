@@ -2,23 +2,21 @@
  * Created by tch on 2015/8/31.
  * 理财师个人主页(master_profile)的个人资料页面相关js.
  */
-
-
 //页面初始化，从后台读取个人信息的值并显示
 $(document).ready(function () {
     //居住地插件初始化
     AreaSelector().init();
 
-    $("#master_profile_phone").val(phone); //设置手机号
-    $("#master_profile_email").val(email); //设置邮箱
-    $("#master_profile_name").html(username); //设置用户名
-    $("#master_profile_sex").html(gender); //设置性别
-    $("#master_profile_birthday").html(birthday); //设置生日
-    $("#master_profile_company").html(institue); //设置机构名称
-    $("#master_profile_identification").html(qualification); //设置资格证号
-    $("#master_profile_comments").html(signature); //设置个人简介
+    $("#mobile").val(phone); //设置手机号
+    $("#email").val(email); //设置邮箱
+    $("#username").html(username); //设置用户名
+    $("#gender").html(gender); //设置性别
+    $("#birthday").html(birthday); //设置生日
+    $("#institue").html(institue); //设置机构名称
+    $("#qualification").html(qualification); //设置资格证号
+    $("#signature").html(signature); //设置个人简介
     // 初始化省份、城市、地区
-    //AreaSelector().initProvince(province, city, county);
+    AreaSelector().initProvince(province, city, county);
 });
 
 //发送验证码按钮倒计时一分钟
@@ -105,23 +103,23 @@ function error (response, newValue) {
 }
 $(document).ready(function () {
 
-    $('#master_profile_name').editable({success: success, error: error});
-    $('#master_profile_company').editable({success: success, error: error});
-    $('#master_profile_identification').editable({success: success, error: error});
+    $('#username').editable({success: success, error: error});
+    $('#institue').editable({success: success, error: error});
+    $('#qualification').editable({success: success, error: error});
     $('#master_profile_truename').editable({success: success, error: error});
     $('#master_profile_idcard').editable({success: success, error: error});
     //选择性别的x-editable选项
-    $('#master_profile_sex').editable({
+    $('#gender').editable({
         source: [
             {value: 1, text: '男'},
-            {value: 2, text: '女'},
+            {value: 0, text: '女'},
         ],
         success: success,
         error: error
     });
 
     //设置出生日期的x-editable选项
-    $('#master_profile_birthday').editable({
+    $('#birthday').editable({
         format: 'YYYY-MM-DD',
         viewformat: 'YYYY/MM/DD',
         template: 'YYYY/MMMM/D',
@@ -134,7 +132,7 @@ $(document).ready(function () {
         error: error
     });
     //个人简介的x-editable选项
-    $('#master_profile_comments').editable({
+    $('#signature').editable({
         url: '/post',
         rows: 5,
         success: success,
@@ -154,6 +152,7 @@ function read_avatar() {
         return false;
     }
     reader.onload = function (e) {
+
 
         $('#display_avatar_block').html('<img id="master-profile-avatar-display" class=" img-responsive"' +
             'name="master-profile-avatar-display"' +

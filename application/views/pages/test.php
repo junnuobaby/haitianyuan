@@ -38,6 +38,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         $('#username').editable({
             url: '<?php echo base_url("index.php/test/get")?>',
             title: 'Enter username',
+            name: 'myname',
             success: function(response, newValue) {
                 if(response.status == 'error') return response.msg; //msg will be shown in editable form
             }

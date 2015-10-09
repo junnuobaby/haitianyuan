@@ -24,6 +24,15 @@ class Master extends CI_Controller
         $this->load->view('master/master_qa');
     }
 
+    public function publish_opinion()
+    {
+        $this->load->view('master/publish_opinion');
+    }
+    public function published_opinion()
+    {
+        $this->load->view('master/published_opinion');
+    }
+
 //    加载理财师主页
     public function master_homepage()
     {

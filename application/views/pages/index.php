@@ -28,25 +28,21 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="col-sm-10 col-md-10 col-lg-10 col-sm-offset-1 col-md-offset-1 col-lg-offset-1">
                                 <div class="row">
                                     <div class="col-lg-1 col-md-1"></div>
-                                    <?php $names = array('tom', 'jack', 'bobo', 'hahha', 'xx');
-                                    $count = 0;
-                                    ?>
 
-                                    <?php foreach ($names as $name): ?>
-                                        <?php $count++; ?>
+                                    <?php foreach ($master_info as $master): ?>
+                                      <a href = "<?php echo base_url('index.php/home/load_home/master/'.$master['user_id']);?>">
                                         <div class="col-sm-2 col-md-2 col-lg-2 ">
-                                            <div class="thumbnail index-thumbnail">
-                                                <img
-                                                    src="<?php echo base_url('/assets/images/touxiang/' . $count . '.jpg'); ?>"
-                                                    alt="...">
 
-                                                <div class="caption">
-                                                    <h4><?php echo $name ?></h4>
+                                            <div class="thumbnail">
 
-                                                    <p><a href="#" class="btn btn-primary" role="button">Button</a></p>
+                                                <img src="<?php echo base_url('/uploads/'.$master['face_pic']); ?>"
+                                                    class="img-responsive" alt="...">
+                                                <div class="text-center">
+                                                    <h4><?php echo $master['username'] ?></h4>
                                                 </div>
                                             </div>
                                         </div>
+                                      </a>
                                     <?php endforeach; ?>
                                 </div>
                             </div>
@@ -73,6 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
 <?php $this->load->view('./templates/footer'); ?>
 </body>
+
 
 
 </html>
