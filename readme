@@ -25,7 +25,6 @@
     master_profile 理财师的个人资料页面，可编辑个人资料
     master_homepage 理财师个人主页
     vip_price vip购买界面
-    master_opinion 具体到每一个观点的页面
 
 
 5. user 文件夹下的页面说明 (该文件夹下存放理财师的个人空间页面)

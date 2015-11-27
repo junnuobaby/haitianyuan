@@ -1,4 +1,4 @@
-<!--首页-->
+<!--登陆-->
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 ?><!DOCTYPE html>
@@ -23,9 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             </div>
 
                             <div class="col-md-6 col-sm-6 ">
-<!--                                <form class="form-horizontal login_form">-->
-                                <?php echo validation_errors(); ?>
-                                <?php echo form_open('login/login','class="form-horizontal login_form"'); ?>
+                                <form class="form-horizontal login_form">
                                     <div class="form-group">
                                         <label for="weibo_name" class="col-md-3 col-sm-3 control-label">用户名：</label>
 

@@ -7,6 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 
 <script  src="<?php echo base_url('/assets/js/htyjs/basic_info_validation.js') ?>"></script>
+
 <div class="wrapper">
     <?php $this->load->view('./templates/navbar'); ?>
     <?php $this->load->view('./templates/jumptron'); ?>
@@ -155,7 +156,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <p><strong>6. </strong>我们确保不会泄露您的个人信息。</p>
 
                             </div>
-
                         </div>
                     </div>
                 </div>

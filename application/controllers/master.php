@@ -33,12 +33,6 @@ class Master extends CI_Controller
         $this->load->view('master/published_opinion');
     }
 
-//    加载理财师主页
-    public function master_homepage()
-    {
-        $this->load->view('master/master_homepage');
-    }
-
 //    加载vip支付界面
     public function  vip_price()
     {
@@ -62,6 +56,50 @@ class Master extends CI_Controller
         $data['view_num'] = '512';
         $this->load->view('master/master_opinion', $data);
     }
+
+    public function set_price()
+    {
+        $data['month_vip'] = 100;
+        $data['half_year_vip'] = 580;
+        $data['year_vip'] = 1000;
+        $this->load->view('master/set_vip_price', $data);
+    }
+
+    public function change_price()
+    {
+        echo 'success';
+    }
+    public function master_vips()
+    {
+        $record = array('start_time'=>'2015-07-16', 'term'=>'30天','price'=>'10.00');
+        $records = array($record, $record, $record);
+        $qa = array(
+            "id" => 1,
+            "question" => "老师你好，今天大盘强震，后市如何操作？需要减仓规避风险吗？玉龙股份17.6成本，微套，近期能看高吗？后市如何操作。",
+            "answer" => "牛市快跌是必然走势，所以短线需要规避几天再抄底，明日估计会有个修正的高开，根据你的仓位做处理，满仓当然要先减仓",
+            "question_time" => "2015-08-09 20:25",
+            "answer_time" => "2015-08-09 22:25",
+        );
+        $qa_list = array($qa, $qa, $qa, $qa, $qa, $qa, $qa);
+        $vip1 = array(
+            'vip_id' => 1,
+            'vip_name' => '开普勒',
+            'vip_left_days' => '27',
+            'records' => $records,
+            'qa_list' => $qa_list
+        );
+        $vip2 = array(
+            'vip_id' => 2,
+            'vip_name' => '开普勒',
+            'vip_left_days' => '27',
+            'records' => $records,
+            'qa_list' => $qa_list
+        );
+        $vips = array($vip1, $vip2);
+        $data['vips'] = $vips;
+        $this->load->view('master/master_vips', $data);
+    }
+
 
 }
 
