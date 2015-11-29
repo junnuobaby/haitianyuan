@@ -9,7 +9,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <?php $this->load->view('./templates/navbar'); ?>
     <?php $this->load->view('./templates/jumptron'); ?>
     <!--    --><?php //echo base_url("index.php/register/send_code/")?>
-
     <div class="container">
         <div class="panel">
             <div class="panel-body">
