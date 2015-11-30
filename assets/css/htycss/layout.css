@@ -293,6 +293,7 @@ caption.caption-yinbang{
 .btn-a-light:active {
     color: white;
 }
+/*登录界面*/
 .login-box{
     color: white;
     position: absolute;
@@ -307,6 +308,17 @@ caption.caption-yinbang{
 .login-form .input-group{
     margin-bottom: 20px;
     margin-top: 20px;
+}
+.login-form .input-group .form-control, .login-btn-div>button.btn{
+    height: 40px;
+}
+.login-btn-div>button.btn{
+    font-size: 16px;
+    transition: all 0.2s;
+}
+.login-btn-div>button.btn:hover{
+    background-color: #fd7a65;
+    color: #fff;
 }
 .login-btn-div{
     margin-top: 10px;

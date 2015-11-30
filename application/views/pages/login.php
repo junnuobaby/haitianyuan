@@ -25,11 +25,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                            name="user_name_input"
                            placeholder="密码">
                 </div>
-                <div class="row" >
-                    <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-5 col-md-offset-1">
                         <a href="#" class="white-color">忘记密码？</a>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <a href="#" class="white-color">免费注册</a>
                     </div>
                 </div>
@@ -43,7 +43,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </form>
         </div>
         <div>
-            <ul class="nav navbar-nav">
+            <ul class="nav navbar-nav txt-center">
                 <!--qq第三方登陆-->
                 <li><a href="#" class="white-color">
                         <img width="25px" height="25px" src="<?php echo base_url('/assets/images/qq.png'); ?>"
