@@ -51,8 +51,8 @@
                 人
             </p>
             <p>正在参与海天模拟炒股</p>
+            <hr/>
         </div>
-        <hr/>
         <div class="join-contest">
             <p><span class="take_in_num">555</span>人正在角逐金榜,<span class="take_in_num">1500</span>人正在角逐银榜</p>
             <p>
@@ -67,8 +67,23 @@
 <script>
     function adjust_img() {
         $('.jumptron_img').each(function () {
+            var jumptron_logo = $('div.jumptron_logo');
+            jumptron_logo.css('top','10%');
+            jumptron_logo.show();
+            $('div.jinbang_num').show();
             var cur = $(window).width();
             $(this).width(cur);
+            if(cur > 1200){
+                $(this).height(400);
+            }
+            else if(cur < 1200 && cur > 768){
+                $(this).height(300);
+                jumptron_logo.css('top','20%');
+                $('div.jinbang_num').hide();
+            }
+            else if(cur < 768){
+                jumptron_logo.hide();
+            }
         });
     }
     window.onload = function () {

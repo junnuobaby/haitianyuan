@@ -78,8 +78,6 @@
         }, function () {
             $('.msg-dropdown-menu').hide();
         });
-
-
     })
 </script>
 

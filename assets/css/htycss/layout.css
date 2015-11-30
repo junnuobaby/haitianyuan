@@ -1,4 +1,4 @@
-/*�û��Զ���CSS*/
+/*主页*/
 .main_jumptron {
     margin-bottom: 30px;
     position: relative;
@@ -11,20 +11,15 @@
 
 .main_jumptron .jumptron_logo {
     position: absolute;
-    right: 500px;
-    top: 30px;
-    width: 360px;
-    height: 332px;
+    right: 25%;
+    top: 10%;
     color: #FFF;
     z-index: 99;
     border-radius: 4px;
     background-color: rgba(255, 255, 255, 0.3);
-}
+    padding: 30px 30px 30px 30px;
 
-.jinbang_num {
-    padding: 30px 40px 10px 40px;
 }
-
 .bang_num span {
     text-align: center;
     display: inline-block;
@@ -38,7 +33,6 @@
     box-sizing: border-box;
 }
 .join-contest {
-    padding: 10px 0;
     text-align: center;
 }
 .take_in_num {
@@ -92,7 +86,7 @@ a.take_in:hover{
     text-decoration: none;
     background-color: transparent;
 }
-/*萌物*/
+/*网站标识*/
 .header .navbar-brand {
     display: block;
     padding: 10px 10px;
@@ -292,18 +286,6 @@ caption.caption-yinbang{
     padding: 10px 10px;
     text-align: center;
 }
-
-.ring{
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 20px;
-    padding: 20px 10px;
-}
-.jin-ring{
-    border: 20px solid #fbd01f;
-}
 /*上面为更新过的*/
 .btn-a-light:link,
 .btn-a-light:visited,
@@ -311,11 +293,25 @@ caption.caption-yinbang{
 .btn-a-light:active {
     color: white;
 }
-
-.login_form {
-    padding-top: 4em;
+.login-box{
+    color: white;
+    position: absolute;
+    right: 22%;
+    top: 20%;
+    background-color: rgba(4,4,4,0.75) ;
+    width: 350px;
+    height: 350px;
+    box-shadow: 0 0 3px #040404;
+    padding: 20px 40px;
 }
-
+.login-form .input-group{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.login-btn-div{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 .sign {
     margin-top: 1em;
     margin-right: 1em;
