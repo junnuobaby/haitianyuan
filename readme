@@ -20,8 +20,12 @@
     lcs 理财师
 
 4.  master 文件夹下的页面说明 (该文件夹下存放理财师的个人空间页面)
-    master-sidebar 侧边栏组件，为菜单栏
-    master-profile 理财师的个人资料页面，可编辑个人资料
+    master_sidebar 侧边栏组件，为理财师个人空间菜单栏
+    master_jumptron 理财师个人主页的巨幕（显示理财师的信息）
+    master_profile 理财师的个人资料页面，可编辑个人资料
+    master_homepage 理财师个人主页
+    vip_price vip购买界面
+
 
 5. user 文件夹下的页面说明 (该文件夹下存放理财师的个人空间页面)
    user-sidebar 侧边栏组件，为菜单栏

@@ -1,7 +1,5 @@
 <!--理财师个人空间侧边栏-->
 <?php
-//$uuid = $this->session->userdata('uuid');//从session获取用户id
-//$basic_info = $this->session->userdata($uuid);//通过用户Id获取用户基本信息
 $basic_info = array(
     "username" => "开普勒",
     "concerns_count" => "10",
@@ -40,17 +38,15 @@ $basic_info = array(
                 <h4><i class="glyphicon glyphicon-edit"></i> 问答管理</h4>
 
                 <div class="list-group">
-                    <a href="#" class="list-group-item">我的提问</a>
-                    <a href="#" class="list-group-item">待回答问题</a>
-                    <a href="#" class="list-group-item">已回答问题</a>
+                    <a href="<?php echo base_url("index.php/master/ques_tobeanswered"); ?>" class="list-group-item">全部问题</a>
                 </div>
             </li>
             <li class="list-group-item ">
                 <h4><i class="glyphicon glyphicon-list-alt"></i> 观点管理</h4>
 
                 <div class="list-group">
-                    <a href="#" class="list-group-item">发布观点</a>
-                    <a href="#" class="list-group-item">已发布观点</a>
+                    <a href="<?php echo base_url("index.php/master/publish_opinion"); ?>" class="list-group-item">发布观点</a>
+                    <a href="<?php echo base_url("index.php/opinion/index"); ?>" class="list-group-item">已发布观点</a>
                 </div>
             </li>
             <li class="list-group-item ">
@@ -62,6 +58,14 @@ $basic_info = array(
                 </div>
             </li>
             <li class="list-group-item ">
+                <h4><i class="glyphicon glyphicon-list-alt"></i> VIP管理</h4>
+
+                <div class="list-group">
+                    <a href="<?php echo base_url("index.php/master/set_price"); ?>" class="list-group-item">VIP价格</a>
+                    <a href="<?php echo base_url("index.php/master/master_vips"); ?>" class="list-group-item">VIP会员</a>
+                </div>
+            </li>
+            <li class="list-group-item ">
                 <h4><i class="glyphicon glyphicon-user"></i> 个人信息管理</h4>
 
                 <div class="list-group">
@@ -69,16 +73,7 @@ $basic_info = array(
                     <a href="<?php echo base_url("index.php/master/master_profile"); ?>" class="list-group-item">修改个人资料</a>
                 </div>
             </li>
-            <li class="list-group-item ">
-                <h4><i class="glyphicon glyphicon-list-alt"></i> 论坛管理</h4>
 
-                <div class="list-group">
-                    <a href="#" class="list-group-item">我的帖子</a>
-                    <a href="#" class="list-group-item">我的回复</a>
-                    <a href="<?php echo base_url('/index.php/master/master_profile') ?>"
-                       class="list-group-item">我的收藏</a>
-                </div>
-            </li>
         </ul>
     </div>
 </div>

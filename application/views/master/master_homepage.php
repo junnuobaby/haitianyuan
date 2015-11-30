@@ -6,137 +6,50 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="zh-cn">
 <?php $this->load->view('./templates/head'); ?>
 <body class="bg-gray">
-<!--<script src="--><?php //echo base_url('/assets/js/htyjs/general_navbar.js') ?><!--"></script>-->
 <?php $this->load->view('./templates/navbar'); ?>
-<?php
-$online_state = false;   //是否在线，在线为true
-$username = "开普勒";
-$concerns_count = "104";
-$fans_count = "2000";
-$vips_count = "1190";
-$questions_count = "2388";
-$satisfication_rate = "80%";
-$response_time = "2";
-$signature = "生活源于自然,成功源于专业,理财源于全面,具备全面的金融理财学识,精通投资策略分析和资产配置";
-?>
-<!--生成一个测试用的问答组-->
-<?php
-$qa = array(
-    "question" => "老师你好，今天大盘强震，后市如何操作？需要减仓规避风险吗？玉龙股份17.6成本，微套，近期能看高吗？后市如何操作。",
-    "answer" => "牛市快跌是必然走势，所以短线需要规避几天再抄底，明日估计会有个修正的高开，根据你的仓位做处理，满仓当然要先减仓",
-    "question_time" => "2015-08-09 20:25",
-    "answer_time" => "2015-08-09 22:25",
-    "star" => "5"
-);
-$qa_list = array($qa, $qa, $qa, $qa, $qa, $qa, $qa);
-?>
 <div class="wrapper">
-    <?php $this->load->view('./templates/navbar');?>
-    <div class="container-fluid master_homepage_jumptron">
-        <div class="container">
-            <div class="col-md-2 col-sm-4">
-                <div class="master_homepage_jumptron_div">
-                    <div class="avatar_box">
-                        <img class="img-responsive" src="<?php echo base_url('/assets/images/touxiang/15.jpg'); ?>"
-                             alt="理财师头像">
-                    </div>
-                    <!--根据是否在线显示不同的状态，当前默认为在线-->
-                    <div class="online_status">
-                        <?php if ($online_state == false): ?>
-                            <img class="img-responsive" src="<?php echo base_url('/assets/images/offline.png'); ?>">
-                        <?php else: ?>
-                            <img class="img-responsive" src="<?php echo base_url('/assets/images/online.png'); ?>">
-                        <?php endif; ?>
-                    </div>
-                    <div>
-                        <a class="btn "><span
-                                class="glyphicon glyphicon-plus"></span> 关注
-                        </a>
-                        <a class="btn" data-toggle="modal" data-target="#question_modal"><span
-                                class="glyphicon glyphicon-question-sign"></span> 提问
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-3">
-                <div class="master_homepage_jumptron_div">
-                    <h3><?php echo $username; ?></h3>
-                    <hr/>
-                    <p class="self-font signature"><span>简介：</span><?php echo $signature; ?></p>
-                </div>
-            </div>
-            <div class="col-md-4 col-md-offset-1 col-sm-4">
-                <div class="master_homepage_jumptron_div">
-                    <div class="row">
-                        <table class="table table-responsive text-center master_info">
-                            <tr>
-                                <td><h5>回答问题数</h5> <h4><?php echo $questions_count; ?></h4></td>
-                                <td><h5>满意率</h5><h4><?php echo $satisfication_rate; ?></h4>
-                                </td>
-                                <td><h5>响应时间</h5><h4><?php echo $response_time; ?>小时</h4>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td><h5>VIP用户</h5><h4><?php echo $vips_count; ?></h4>
-                                </td>
-                                <td><h5>粉丝</h5><h4><?php echo $fans_count; ?></h4></td>
-                                <td><h5>关注</h5><h4><?php echo $concerns_count; ?></h4>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="row text-center">
-                        <a href="<?php echo base_url("index.php/master/vip_price"); ?>" class="btn btn-default vip-link"
-                           target="_blank"><span>体验VIP会员</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+    $data['info'] = $info;
+    $data['is_fan'] = $is_fan;
+    $this->load->view('./master/master_jumptron', $data); ?>
     <!--页面主要内容-->
     <div class="container master_homepage_container">
         <div class="col-md-8 col-sm-8 bg-white block-radius">
             <div class="sub_nav">
-                <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#qa" role="tab" data-toggle="tab">问答</a></li>
-                    <li role="presentation"><a href="#viewpoint" role="tab" data-toggle="tab">观点</a></li>
-                    <li role="presentation"><a href="#demonstration" role="tab" data-toggle="tab">示范</a></li>
-                    <li role="presentation"><a href="#contest" role="tab" data-toggle="tab">华山论剑</a></li>
-                    <li role="presentation"><a href="#bbs" role="tab" data-toggle="tab">论坛</a></li>
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="#" >问答</a></li>
+                    <li role="presentation"><a href="<?php echo base_url("index.php/home/load_home/web/master/op"); ?>" >观点</a></li>
+                    <li role="presentation"><a href="#">示范</a></li>
+                    <li role="presentation"><a href="#">华山论剑</a></li>
+                    <li role="presentation"><a href="#">论坛</a></li>
                 </ul>
             </div>
             <div class="tab-content">
                 <!--问答-->
-                <div role="tabpanel" class="tab-pane active" id="qa">
-                        <div class="bg-white q_a_container">
-                            <?php foreach ($qa_list as $qa_item): ?>
-                                <div class="q_a">
-                                    <article>
-                                        <h4 class="q_a_question inline_block">
-                                            <span class="theme-color">问</span>
-                                            <a href="#"><?php echo $qa_item['question']; ?> </a></h4>
-                                        <span>【<?php echo $qa_item['question_time']; ?>】</span>
-                                        <p class="q_a_answer"><span
-                                                class="theme-color">答:</span>&nbsp;&nbsp;<?php echo $qa_item['answer']; ?>
-                                        </p>
-                                        <div class="q_a_footer">
-                                            <span>满意度：<?php echo $qa_item['star']; ?></span>
-                                            <span>回答时间：<?php echo $qa_item['answer_time']; ?></span>
-                                        </div>
-                                    </article>
-                                </div>
-                                <hr class="q_a_hr"/>
-                            <?php endforeach; ?>
-                        </div>
+                <div class="tab-pane active" id="qa">
+                    <div class="bg-white q_a_container">
+                        <?php foreach ($qa_list as $qa_item): ?>
+                            <div class="q_a">
+                                <article>
+                                    <h4 class="q_a_question inline_block">
+                                        <span class="q_a_span">问</span>
+                                        <a href="#"><?php echo $qa_item['question']; ?> </a></h4>
+                                    <span>【<?php echo $qa_item['question_time']; ?>】</span>
+
+                                    <p class="q_a_answer"><span
+                                            class="theme-color">答:</span>&nbsp;&nbsp;<?php echo $qa_item['answer']; ?>
+                                    </p>
+
+                                    <div class="q_a_footer">
+                                        <span>满意度：<?php echo $qa_item['star']; ?></span>
+                                        <span>回答时间：<?php echo $qa_item['answer_time']; ?></span>
+                                    </div>
+                                </article>
+                            </div>
+                            <hr class="q_a_hr"/>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
-                <!--观点-->
-                <div role="tabpanel" class="tab-pane" id="viewpoint">...</div>
-                <!--示范-->
-                <div role="tabpanel" class="tab-pane" id="demonstration">...</div>
-                <!--华山论剑+-->
-                <div role="tabpanel" class="tab-pane" id="contest">...</div>
-                <!--论坛-->
-                <div role="tabpanel" class="tab-pane" id="bbs">...</div>
             </div>
         </div>
         <?php $this->load->view('./templates/right-sidebar'); ?>
@@ -144,45 +57,6 @@ $qa_list = array($qa, $qa, $qa, $qa, $qa, $qa, $qa);
     <!--悬停go-top按钮-->
     <?php $this->load->view('./templates/go-top'); ?>
 </div>
-<!--提问的模态框-->
-<div class="modal fade" id="question_modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">输入问题（不超过500字）</div>
-                    <div class="panel-body">
-                        <form>
-                            <textarea id="my_question" name="question" rows="5" placeholder="请尽可能准确地描述您的问题"></textarea>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">确定</button>
-            </div>
-        </div>
-    </div>
-</div>
 <?php $this->load->view('./templates/footer'); ?>
 </body>
-<script>
-    $(document).ready(function () {
-        $('.master_homepage_jumptron').css('background-image', 'url("<?php echo base_url('assets/images/jumptron_background.jpg'); ?>")');
-        /* 让模态框居中 */
-        function centerModals() {
-            $('.modal').each(function (i) {
-                var $clone = $(this).clone().css('display', 'block').appendTo('body');
-                var top = Math.round(($clone.height() - $clone.find('.modal-content').height()) / 2);
-                top = top > 0 ? top : 0;
-                $clone.remove();
-                $(this).find('.modal-content').css("margin-top", top);
-            });
-        }
-
-        $('#question_modal').on('show.bs.modal', centerModals);
-        $(window).on('resize', centerModals);
-    });
-</script>
 </html>
