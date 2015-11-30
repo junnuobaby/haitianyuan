@@ -2,92 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="274f4cb2-c636-4081-907e-709a3a31a302" name="Default" comment="update the register php">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/jumptron/1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/jumptron/2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/jumptron/3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/dashi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo/logo_0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo/logo_1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo/logo_2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo/logo_3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo/logo_4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo/logo_5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/logo/logo_6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/slogan0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/sub_nav_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/xlbg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/zhuge0.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/images/zongshi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/bar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/bonds_navbar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/chord.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/echarts-all.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/echarts.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/eventRiver.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/force.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/funnel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/gauge.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/graph.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/heros_list.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/home.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/k.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/line.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/map.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/master/master_vips.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/opinion.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/pie.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/radar.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/scatter.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/master/set_vip_price.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/simu_buy.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/simu_cancel.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/simu_done.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/simu_index.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/simu_menu.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/simu_perform.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/simu_sell.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/master/single_opinion.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/templates/stock_jumptron.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/stocks.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/trading_guides.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/stocks/trading_rules.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/tree.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/treemap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/controllers/user.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user/user_profile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user/user_questions.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user/user_sidebar.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/user/user_vips.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/venn.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/echarts/chart/wordCloud.js" />
-      <change type="DELETED" beforePath="D:\wamp\www\ht_dev\application\views\master\upload_form.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\ht_dev\application\views\master\upload_success.php" afterPath="" />
-      <change type="DELETED" beforePath="D:\wamp\www\ht_dev\application\views\pages\register_success.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/htycss/global.css" afterPath="$PROJECT_DIR$/assets/css/htycss/global.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/go-top.php" afterPath="$PROJECT_DIR$/application/views/templates/go-top.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/index.php" afterPath="$PROJECT_DIR$/application/views/pages/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/jumptron.php" afterPath="$PROJECT_DIR$/application/views/templates/jumptron.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/htycss/layout.css" afterPath="$PROJECT_DIR$/assets/css/htycss/layout.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/login.php" afterPath="$PROJECT_DIR$/application/views/pages/login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/master.php" afterPath="$PROJECT_DIR$/application/controllers/master.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/master/master_homepage.php" afterPath="$PROJECT_DIR$/application/views/master/master_homepage.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/master/master_jumptron.php" afterPath="$PROJECT_DIR$/application/views/master/master_jumptron.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/master/master_opinion.php" afterPath="$PROJECT_DIR$/application/views/master/master_opinion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/htyjs/master_profile.js" afterPath="$PROJECT_DIR$/assets/js/htyjs/master_profile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/master/master_profile.php" afterPath="$PROJECT_DIR$/application/views/master/master_profile.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/master/master_qa.php" afterPath="$PROJECT_DIR$/application/views/master/master_qa.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/master/master_sidebar.php" afterPath="$PROJECT_DIR$/application/views/master/master_sidebar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/navbar.php" afterPath="$PROJECT_DIR$/application/views/templates/navbar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/master/publish_opinion.php" afterPath="$PROJECT_DIR$/application/views/master/publish_opinion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/master/published_opinion.php" afterPath="$PROJECT_DIR$/application/views/master/published_opinion.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme" afterPath="$PROJECT_DIR$/readme" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/register.php" afterPath="$PROJECT_DIR$/application/views/pages/register.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/register_user_info.php" afterPath="$PROJECT_DIR$/application/views/pages/register_user_info.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/right-sidebar.php" afterPath="$PROJECT_DIR$/application/views/templates/right-sidebar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/master/vip_price.php" afterPath="$PROJECT_DIR$/application/views/master/vip_price.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="c141d308-cde1-4442-af4f-0f1dd4a70955" name="Rejected commit: Default" comment="create the CI frame" />
@@ -125,17 +40,27 @@
         <entry file="file://$PROJECT_DIR$/assets/css/htycss/layout.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+              <caret line="291" column="23" selection-start-line="291" selection-start-column="23" selection-end-line="291" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pages/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0201794">
-              <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+            <state vertical-scroll-proportion="-29.037037">
+              <caret line="171" column="58" selection-start-line="171" selection-start-column="58" selection-end-line="171" selection-end-column="58" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <marker date="1448621202286" expanded="true" signature="16222:16562" placeholder="..." />
@@ -169,7 +94,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/application/config/autoload.php" />
         <option value="$PROJECT_DIR$/application/controllers/index.php" />
         <option value="$PROJECT_DIR$/application/views/master/publish_opinion.php" />
         <option value="$PROJECT_DIR$/application/views/master/published_opinion.php" />
@@ -220,6 +144,7 @@
         <option value="$PROJECT_DIR$/application/views/templates/jumptron.php" />
         <option value="$PROJECT_DIR$/assets/css/htycss/layout.css" />
         <option value="$PROJECT_DIR$/application/views/pages/index.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -727,9 +652,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16979167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16979167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32893288" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -772,6 +697,9 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.gitignore" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1089,14 +1017,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/htycss/global.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="110" column="18" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/jumptron.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4899103">
@@ -1105,18 +1025,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/htycss/layout.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0201794">
-          <caret line="190" column="0" selection-start-line="190" selection-start-column="0" selection-end-line="190" selection-end-column="0" />
+        <state vertical-scroll-proportion="-29.037037">
+          <caret line="171" column="58" selection-start-line="171" selection-start-column="58" selection-end-line="171" selection-end-column="58" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#section#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1448621202286" expanded="true" signature="16222:16562" placeholder="..." />
@@ -1124,6 +1036,30 @@
             <marker date="1448621202286" expanded="true" signature="16606:16786" placeholder="..." />
             <marker date="1448621202286" expanded="true" signature="16725:16786" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/htycss/global.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="18" selection-start-line="110" selection-start-column="11" selection-end-line="110" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/css/htycss/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="291" column="23" selection-start-line="291" selection-start-column="23" selection-end-line="291" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
