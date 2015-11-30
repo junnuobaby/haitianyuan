@@ -7,7 +7,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <body>
 <div class="wrapper">
     <?php $this->load->view('./templates/navbar'); ?>
-
     <div class="login-box">
         <div class="login-form">
             <form class="form-horizontal login_form">

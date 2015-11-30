@@ -46,13 +46,13 @@
     color: #FFF;
     font-size: 16px;
     border-color: #FF957C;
+    transition:all 0.2s;
 }
 a.take_in:hover, a.take_in:active, a.take_in:visited {
     color: white;
 }
 a.take_in:hover{
-    -moz-transform:scale(1.1,1.1);
-    -webkit-transform:scale(1.1,1.1);
+    background-color: #ff6e68;
 }
 .index-thumbnail {
     height: 400px;
@@ -304,6 +304,12 @@ caption.caption-yinbang{
     height: 350px;
     box-shadow: 0 0 3px #040404;
     padding: 20px 40px;
+}
+.login-box a{
+    color: #fff;
+}
+.login-box a:active,.login-box a:focus,.login-box a:visited{
+    background-color: transparent !important;
 }
 .login-form .input-group{
     margin-bottom: 20px;
