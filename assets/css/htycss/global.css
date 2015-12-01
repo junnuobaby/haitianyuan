@@ -21,7 +21,7 @@ a:hover{
 }
 .wrapper {
     min-height: 100%;
-    margin: 0 auto 3em auto;
+    margin: 0 auto 0 auto;
 }
 .inline_block{
     display: inline;

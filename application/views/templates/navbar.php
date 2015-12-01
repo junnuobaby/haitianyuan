@@ -23,7 +23,7 @@
         </nav>
 
         <!--根据是否登陆导航条显示不同的内容，当前默认为未登录-->
-        <?php $login_state = true; ?>
+        <?php $login_state = false; ?>
         <?php if ($login_state == false): ?>
             <div class="navbar-form navbar-right navbar-login">
                 <a href="<?php echo base_url('/index.php/login') ?>" class="theme-color">

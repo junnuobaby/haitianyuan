@@ -12,7 +12,8 @@ class Register extends CI_Controller {
 //    加载注册页面
     public function index()
     {
-        $this->load->view('pages/register');
+        $data['nav_mode'] = 'register';
+        $this->load->view('pages/login',$data);
     }
 //    注册完成后，加载信息完善页面
     public function user_info()
