@@ -21,7 +21,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
                     <article class="bg-white">
-                        <header class="txt_center">
+                        <header class="text-center">
                             <h2><?php echo $opinion['op_title']; ?></h2>
                             <section class="sop-meta">
                                 <span class="sop-author">作者 ： <?php echo $opinion['master_name']; ?></span>•
@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     echo '免费';
                                 }; ?></span>
                             <button class="btn btn-success glyphicon glyphicon-thumbs-down"> <?php echo '0';?> 太水了</button>
-                            <button class="btn btn-danger self-btn-danger glyphicon glyphicon-thumbs-up"> <?php echo '0';?> 赞一个</button>
+                            <button class="btn btn-danger theme-bg-color glyphicon glyphicon-thumbs-up"> <?php echo '0';?> 赞一个</button>
                         </footer>
                     </article>
                 </div>

@@ -45,14 +45,13 @@
     padding: 10px 100px;
     color: #FFF;
     font-size: 16px;
-    border-color: #FF957C;
     transition:all 0.2s;
 }
 a.take_in:hover, a.take_in:active, a.take_in:visited {
     color: white;
 }
 a.take_in:hover{
-    background-color: #ff6e68;
+    background-color: #FD7A65;
 }
 .index-thumbnail {
     height: 400px;
@@ -123,7 +122,6 @@ a.take_in:hover{
     margin-top: 10px;
     margin-left: 20px;
 }
-
 .btn.com:hover, .btn.com:active, .btn.com:focus {
     background: #FD9271 none repeat scroll 0% 0% !important;
     color: #FFF !important;
@@ -361,7 +359,7 @@ caption.caption-yinbang{
     height: 40px;
 }
 .login-btn-div>button.btn:hover{
-    background-color: #fd7a65;
+    background-color: #FD7A65;
     color: #fff;
 }
 .login-btn-div{
@@ -395,7 +393,7 @@ caption.caption-yinbang{
 }
 
 .profile-usermenu li h4 {
-    color: #f4645f;
+    color: #FD9271;
     border-bottom: 1px solid #ebebeb;
 }
 
@@ -414,7 +412,7 @@ caption.caption-yinbang{
 }
 
 .profile-usermenu ul li a:hover {
-    background-color: #f4645f;
+    background-color: #FD7A65;
     color: #ffffff;
 }
 
@@ -425,7 +423,7 @@ caption.caption-yinbang{
 }
 
 a.basic-info-a {
-    color: #f4645f;
+    color: #FD9271;
 }
 
 .input-group-verification {
@@ -440,7 +438,7 @@ a.basic-info-a {
     position: relative;
     cursor: pointer;
     color: #ffffff;
-    background: #f4645f;
+    background: #FD9271;
     border: 1px solid #ddd;
     border-radius: 4px;
     overflow: hidden;
@@ -459,7 +457,7 @@ a.avatar-upload:visited {
 
 a.avatar-upload:hover {
     color: #ffffff;
-    background: #a62b2b;
+    background: #FD7A65;
     border-color: #ccc;
     text-decoration: none
 }
@@ -488,7 +486,7 @@ a.avatar-upload:hover {
 }
 
 .self_master_address {
-    color: #f4645f;
+    color: #FD9271;
 }
 
 /*联系我们页面样式*/
@@ -566,7 +564,7 @@ a.avatar-upload:hover {
 
 #vip_price h1.slogan {
     margin: 100px auto 150px auto;
-    color: #f4645f;
+    color: #FD9271;
     font-size: 50px;
     text-shadow: 3px 3px 5px #cccccc;
 }
@@ -574,8 +572,8 @@ a.avatar-upload:hover {
 #vip_price div.box {
     height: 400px;
     width: 280px;
-    background-color: #f4645f;
-    border: solid 5px #f4645f;
+    background-color: #FD9271;
+    border: solid 5px #FD9271;
     border-radius: 5px;
     box-shadow: 2px 2px 3px #aaaaaa;
 }
@@ -625,7 +623,7 @@ a.avatar-upload:hover {
     padding-left: 30px;
     padding-right: 30px;
     width: 200px;
-    background-color: #f4645f;
+    background-color: #FD9271;
     border-radius: 50px;
     color: white;
     font-size: 20px;
@@ -640,7 +638,7 @@ a.avatar-upload:hover {
 }
 
 #vip_price .box ul.features i {
-    color: #f4645f;
+    color: #FD9271;
     margin-right: 10px;
 }
 
@@ -846,7 +844,7 @@ div.master_view section {
 }
 
 .view_footer .edit_view {
-    color: #f4645f;
+    color: #FD9271;
     float: right;
     margin-right: 10px;
 }
@@ -867,7 +865,7 @@ div.master_view section {
     padding: 6px 12px;
     margin-left: -1px;
     line-height: 1.42857143;
-    color: #f4645f;
+    color: #FD9271;
     text-decoration: none;
     background-color: #fff;
     border: 1px solid #ddd;
@@ -968,7 +966,7 @@ div.master_view section {
 }
 
 .nav_current {
-    border-bottom: 2px solid #f4645f;
+    border-bottom: 2px solid #FD9271;
     margin-bottom: -2px;
 }
 

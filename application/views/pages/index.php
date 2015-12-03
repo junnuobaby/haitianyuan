@@ -51,7 +51,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
         </section>
         <section class="index-section index-rmd-master">
             <div class="container bg-white mas_min_height">
-                <div class="index-section-header txt_center">
+                <div class="index-section-header text-center">
                     <div class="header-div">
                         <span>推荐理财师</span>
                         <div class="help-line"></div>
@@ -73,7 +73,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo '君诺宝宝' ?></h4>
+                                                        <h4 class="theme-color"><?php echo '君诺宝宝' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -84,7 +84,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo 'Krischao' ?></h4>
+                                                        <h4 class="theme-color"><?php echo 'Krischao' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -95,7 +95,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo 'Lee' ?></h4>
+                                                        <h4 class="theme-color"><?php echo 'Lee' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -106,7 +106,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo '开普勒' ?></h4>
+                                                        <h4 class="theme-color"><?php echo '开普勒' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -117,7 +117,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo '开普勒' ?></h4>
+                                                        <h4 class="theme-color"><?php echo '开普勒' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -128,7 +128,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo 'Tom' ?></h4>
+                                                        <h4 class="theme-color"><?php echo 'Tom' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -146,7 +146,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo '君诺宝宝' ?></h4>
+                                                        <h4 class="theme-color"><?php echo '君诺宝宝' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -157,7 +157,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo '君诺宝宝' ?></h4>
+                                                        <h4 class="theme-color"><?php echo '君诺宝宝' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -168,7 +168,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo 'Krischao' ?></h4>
+                                                        <h4 class="theme-color"><?php echo 'Krischao' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -179,7 +179,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo 'Lee' ?></h4>
+                                                        <h4 class="theme-color"><?php echo 'Lee' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -190,7 +190,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo '开普勒' ?></h4>
+                                                        <h4 class="theme-color"><?php echo '开普勒' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -201,7 +201,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                                                          alt="...">
 
                                                     <div class="text-center">
-                                                        <h4 class="orange-color"><?php echo 'Tom' ?></h4>
+                                                        <h4 class="theme-color"><?php echo 'Tom' ?></h4>
                                                     </div>
                                                 </a>
                                             </div>
@@ -226,7 +226,7 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
                         </div>
                     </div>
                 </div>
-                <div class="index-section-header txt_center">
+                <div class="index-section-header text-center">
                     <div class="header-div">
                         <span>英雄榜</span>
 

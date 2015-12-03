@@ -47,7 +47,7 @@ $hot_topic_list = array(
         <h4 class="title theme-color">下载</h4>
 
         <div class="content">
-            <a href="#" class="btn btn-block btn-danger self-btn-danger btn-block btn-lg"
+            <a href="#" class="btn btn-block btn-danger theme-bg-color btn-block btn-lg"
                style="color: white;">ios客户端下载</a>
         </div>
     </div>

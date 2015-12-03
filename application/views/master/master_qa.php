@@ -51,10 +51,10 @@ $qa_list = array($qa, $qa, $qa, $qa, $qa, $qa);
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#qa_undo_list" role="tab"
                                                                   data-toggle="tab">待回答 <span
-                                    class="badge green-bg--color"><?php echo $qu_num ?></span></a>
+                                    class="badge bg-green"><?php echo $qu_num ?></span></a>
                         </li>
                         <li role="presentation"><a href="#qa_done" aria-controls="profile" role="tab" data-toggle="tab">已解决
-                                <span class="badge theme-bg-color"><?php echo $qu_answered_num ?></span></a>
+                                <span class="badge bg-green"><?php echo $qu_answered_num ?></span></a>
                         </li>
 
                     </ul>
@@ -84,7 +84,7 @@ $qa_list = array($qa, $qa, $qa, $qa, $qa, $qa);
                                              id="<?php echo 'edit_answer_' . $qu_undo_item['qu_id']; ?>">
                                             <div class="well">
                                                 <textarea class="ta"
-                                                          id="<?php echo 'answer_' . $qu_undo_item['qu_id']; ?>">若该问题无法回答，请输入暂时无法回答该问题。</textarea>
+                                                          id="<?php echo 'answer_' . $qu_undo_item['qu_id']; ?>"></textarea>
                                                 <button class="btn btn-default btn_cancel"
                                                         onclick="btn_cancel('<?php echo $qu_undo_item['qu_id'] ?>')">取消
                                                 </button>

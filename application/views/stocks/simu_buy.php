@@ -56,7 +56,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                                            name="buy_quantity">
                                                 </div>
                                             </div>
-                                            <a class="btn btn-danger self-btn-danger buy_stock_btn" id="buy">买入
+                                            <a class="btn btn-danger theme-bg-color buy_stock_btn" id="buy">买入
                                             </a>
                                         </form>
                                     </div>

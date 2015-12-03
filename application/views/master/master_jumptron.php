@@ -108,7 +108,7 @@ $signature = $info['signature'];
 </div>
 <script>
     $(document).ready(function () {
-        $('.master_homepage_jumptron').css('background-image', 'url("<?php echo base_url('assets/images/jumptron_background.jpg'); ?>")');
+        $('.master_homepage_jumptron').css('background-image', 'url("<?php echo base_url('assets/images/back/2.jpg'); ?>")');
     });
     $(document).ready(function () {
         /* 让模态框居中 */

@@ -43,12 +43,12 @@ $qa_list = array($qa, $qa, $qa, $qa, $qa, $qa, $qa, $qa, $qa, $qa);
                                     <h4><a href="#" class="theme-color"><?php echo $vip['vip_name']; ?></a></h4>
 
                                     <p><span>剩余服务期： <?php echo $vip['vip_left_days']; ?>天</span> |
-                                           <span><a class="hty_a" role="button" data-toggle="collapse"
+                                           <span><a class="blue-color" role="button" data-toggle="collapse"
                                                     href="#<?php echo 'collapse'.$vip['vip_id'];?>" aria-expanded="false"
                                                     aria-controls="collapseExample">
                                                    查看历史订单
                                                </a></span> |
-                                        <span><a href="#records_modal" class="hty_a" data-toggle="modal">历史问答记录</a></span>
+                                        <span><a href="#records_modal" class="blue-color" data-toggle="modal">历史问答记录</a></span>
                                     </p>
 
                                     <div class="collapse" id="<?php echo 'collapse'.$vip['vip_id']; ?>">

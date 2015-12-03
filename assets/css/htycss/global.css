@@ -10,10 +10,12 @@ body{
     height: 100%;
     line-height: 1.75em;
     overflow: -moz-scrollbars-vertical;
+    min-height: 100%;
     font-family: "Helvetica Neue", Helvetica, Microsoft Yahei, Hiragino Sans GB, WenQuanYi Micro Hei, sans-serif;
 }
 a{
-    color: black;
+    color: #040404;
+    outline: medium none !important;
 }
 a:hover{
     text-decoration: none;
@@ -24,12 +26,9 @@ a:hover{
     margin: 0 auto 0 auto;
 }
 .inline_block{
-    display: inline;
-}
-.inline_div{
     display: inline-block;
 }
-/*footer style*/
+/*页脚样式*/
 footer.page_footer {
     font-size: 13px;
     color: #555555;
@@ -44,18 +43,17 @@ footer.page_footer span {
 footer.page_footer a {
     color: #555555;
 }
-footer.page_footer p{
+footer.page_footer p {
     margin-top: 10px;
     margin-bottom: 0;
 }
 /*自定义的字体*/
-.self-font {
+.self-font{
     font-family: Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK",
     "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW\-Kai", serif;
 }
-
-/*feedback and Go-top*/
-.fixed-bar {
+/*反馈,回到顶部*/
+.fixed-bar{
     position: fixed;
     right: 1%;
     bottom: 1%;
@@ -100,26 +98,15 @@ footer.page_footer p{
     padding: 7px 10px;
     font-size: 14px;
 }
-
 /*网站的主题颜色*/
 .theme-color {
-    color: #f4645f;
-}
-.theme-bg-color {
-    background-color: #f4645f;
-}
-.orange-color{
     color: #FD9271;
-
 }
-.self-btn-danger {
-    background-color: #FD9271;
-}
-.green-bg-color{
-    background-color: #96cc75;
+.deep-color{
+    color: #FD7A65;
 }
 .green-color{
-    color: #008000;
+    color: #96CC75;
 }
 .black-color{
     color:black;
@@ -130,30 +117,27 @@ footer.page_footer p{
 .white-color{
     color: white;
 }
-.blue-color{
-    color: #59b0ff;;
+/*背景色*/
+.theme-bg-color {
+    background-color: #FD9271;
 }
-/*白色背景*/
 .bg-white{
     background-color: white;
 }
-/*灰色背景*/
 .bg-gray{
     background-color: #ebebeb;
+}
+.bg-green{
+    background-color: #96CC75;
 }
 /*边框圆角*/
 .block-radius{
     border-radius: 5px;
 }
 .container_to_top{
-    margin-top: 100px;
+    margin-top: 30px;
 }
-.txt_center{
-    text-align: center;
-}
-.hty_a{
-color: #337ab7;
-}
+/*页面高度*/
 .mas_min_height{
     min-height: 1000px;
 }

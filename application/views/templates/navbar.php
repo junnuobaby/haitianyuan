@@ -23,7 +23,7 @@
         </nav>
 
         <!--根据是否登陆导航条显示不同的内容，当前默认为未登录-->
-        <?php $login_state = false; ?>
+        <?php $login_state = true; ?>
         <?php if ($login_state == false): ?>
             <div class="navbar-form navbar-right navbar-login">
                 <a href="<?php echo base_url('/index.php/login') ?>" class="theme-color">
@@ -39,8 +39,8 @@
                        aria-haspopup="true" aria-expanded="false"><img class="img-responsive"
                                                                        src="<?php echo base_url('assets/images/touxiang/2.jpg'); ?>"/></a>
                     <ul class="dropdown-menu avatar-dropdown-menu">
-                        <li><a href="<?php echo base_url("index.php/master/master_profile"); ?>"><span class="glyphicon glyphicon-home"></span> 我的海天</a></li>
-                        <li><a href="<?php echo base_url("index.php/home/load_home/web/master/qa"); ?>"><span class="glyphicon glyphicon-education"></span> 个人主页</a></li>
+                        <li><a href="<?php echo base_url("index.php/home/load_home/web/master/qa");  ?>"><span class="glyphicon glyphicon-home"></span> 我的主页</a></li>
+                        <li><a href="<?php echo base_url("index.php/master/master_profile");?>"><span class="glyphicon glyphicon-education"></span> 个人中心</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-cog"></span> 账号设置</a></li>
                         <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> 退出登陆</a></li>
                     </ul>
@@ -48,7 +48,7 @@
                 <li class="dropdown user-nav-dropdown user-msg">
                     <a  href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
                        aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-envelope hz-icon"></span> 消息</a>
-                    <ul class="dropdown-menu msg-dropdown-menu" style="width: 50px">
+                    <ul class="dropdown-menu msg-dropdown-menu">
                         <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> 问答</a></li>
                         <li><a href="#"><span
                                     class="glyphicon glyphicon-bullhorn"></span> 通知</a></li>

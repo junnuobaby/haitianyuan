@@ -33,7 +33,7 @@ $view_list = $op;
                             <div class="master_view">
                                 <article>
                                     <header>
-                                        <h4 class="inline_div"><a
+                                        <h4 class="inline_block"><a
                                                 href="<?php echo base_url("index.php/master/view/1"); ?>"
                                                 target="_blank"> <?php echo $view_item['op_title']; ?></a></h4>
                                         <span class="key_word"><?php echo $view_item['op_kwords']; ?></span>

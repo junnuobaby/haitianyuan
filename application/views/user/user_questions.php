@@ -41,10 +41,10 @@ $qa_list = array($qa, $qa, $qa);
                     <ul class="nav nav-tabs" role="tablist">
                         <li role="presentation" class="active"><a href="#qa_undo_list" role="tab"
                                                                   data-toggle="tab">未解决 <span
-                                    class="badge green-color"><?php echo $qu_num ?></span></a>
+                                    class="badge bg-green"><?php echo $qu_num ?></span></a>
                         </li>
                         <li role="presentation"><a href="#qa_done" aria-controls="profile" role="tab" data-toggle="tab">已解决
-                                <span class="badge theme-bg-color"><?php echo $qu_answered_num ?></span></a>
+                                <span class="badge bg-green"><?php echo $qu_answered_num ?></span></a>
                         </li>
 
                     </ul>

@@ -33,7 +33,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             <div class="master_view">
                                 <article>
                                     <header>
-                                        <h4 class="inline_div"><a
+                                        <h4 class="inline_block"><a
                                                 href="<?php echo base_url("index.php/opinion/single_opinion").'/'.$view_item['op_id']; ?>"
                                                 target="_blank"> <?php echo $view_item['op_title']; ?></a></h4>
                                         <span class="key_word"><?php echo $view_item['op_kwords']; ?></span>
