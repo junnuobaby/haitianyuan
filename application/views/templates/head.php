@@ -7,7 +7,11 @@
     <link href="<?php echo base_url('/assets/css/htycss/layout.css'); ?>" rel="stylesheet" media="screen">
     <link href="<?php echo base_url('/assets/css/htycss/global.css'); ?>" rel="stylesheet" media="screen">
     <link href="<?php echo base_url('/assets/css/bootstrap-editable.css'); ?>" rel="stylesheet" media="screen">
+    <link href="<?php echo base_url('/assets/css/jquery.fullPage.css'); ?>" rel="stylesheet" media="screen">
     <script src="<?php echo base_url('/assets/js/jquery.min.js'); ?>"></script>
     <script src="<?php echo base_url('/assets/js/bootstrap.min.js'); ?>"></script>
     <script src="<?php echo base_url('/assets/js/bootstrap-editable.js'); ?>"></script>
+    <script src="<?php echo base_url('/assets/js/jquery.fullPage.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/assets/js/jquery.easing.min.js'); ?>"></script>
+    <script src="<?php echo base_url('/assets/js/htyjs/helper.js'); ?>"></script>
 </head>

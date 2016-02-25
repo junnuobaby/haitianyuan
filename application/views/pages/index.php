@@ -17,10 +17,9 @@ $jinbang = array($user,$user,$user,$user,$user,$user,$user,$user,$user,$user);
             <div class="container">
                 <div class="row">
                     <div class="col-md-4">
-                        <a href="#" class="index-info-box">
+                        <a href="<?php echo base_url('/index.php/index/ht_info'); ?>" class="index-info-box">
                             <h3>什么是海天理财师？</h3>
                             <img width="300px" src="<?php echo base_url('assets/images/logo/logo_2.png'); ?>"/>
-
                             <div class="info-box-img info-box-img-1">
                             </div>
                         </a>

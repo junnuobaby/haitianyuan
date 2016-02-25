@@ -59,6 +59,14 @@ class Home extends CI_Controller
             $data2['view_list'] = $view_list;
             $data2['info'] = $info;
             $this->load->view('master/master_opinion', $data2);
+        }else if ($origin == 'web' && $identity == 'master' && $kind == 'simulation') {
+            $stock = array('SecurityID'=>'000001', 'Symbol'=>'平安银行', 'Volume_All'=>500, 'Ban_Volume'=>100, 'Order_Volume'=>100, 'BuyCost'=>10.05);
+            $data['user_stocks'] = array($stock, $stock,$stock,$stock);
+            $bond = array('SecurityID'=>'000001', 'Symbol'=>'平安银行', 'Volume_All'=>500, 'Ban_Volume'=>100, 'Order_Volume'=>100, 'BuyCost'=>10.05, 'day_left'=>10, 'profit_end'=>'2015-12-30','interest'=>'100');
+            $data['user_bonds'] = array($bond,$bond);
+            $data['info'] = $info;
+            $data['is_fan'] = $is_fan;
+            $this->load->view('master/master_simulation', $data);
         }
     }
 
@@ -82,6 +90,14 @@ class Home extends CI_Controller
             $json = array('status' => 0, 'msg' => 'success');
             echo json_encode($json);
         }
+    }
+
+    public function lcs_index()
+    {
+        $master = array('master_name'=>'君诺宝宝', 'concerns_count' =>'10', 'fans_count'=>'20','online_state'=>true,
+            'signature'=>'生活源于自然,成功源于专业,理财源于全面,具备全面的金融理财学识,精通投资策略分析和资产配置','master_id'=>'10002');
+        $data['masters'] = array($master, $master, $master, $master, $master);
+        $this->load->view('pages/lcs_index', $data);
     }
 
 }

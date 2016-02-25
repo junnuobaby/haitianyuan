@@ -16,7 +16,7 @@
         <nav class="collapse navbar-collapse pull-left" style="margin-top: 5px;">
             <ul class="nav navbar-nav top-menu">
                 <li><a href="<?php echo base_url('/index.php/index'); ?>">首页</a></li>
-                <li><a href="#">问答</a></li>
+                <li><a href="<?php echo base_url('/index.php/home/lcs_index'); ?>">问答</a></li>
                 <li><a href="<?php echo base_url('/index.php/stocks/simulation/index') ?>">华山论剑</a></li>
                 <li><a href="#">论坛</a></li>
             </ul>
@@ -57,9 +57,8 @@
                         <li><a href="#"><span class="glyphicon glyphicon-level-up"></span> 私信</a></li>
                     </ul>
                 </li>
-
                 <li>
-                    <a class="btn com add-in-btn"><span class="glyphicon glyphicon-plus"></span> 理财师入驻</a>
+                    <a href='<?php echo base_url('/index.php/general/settle/1'); ?>' class="btn com add-in-btn"><span class="glyphicon glyphicon-plus"></span> 理财师入驻</a>
                 </li>
             </ul>
         <?php endif; ?>

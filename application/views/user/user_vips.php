@@ -19,7 +19,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                     <div class="panel-heading">
                         <h3 class="panel-title">我的理财师</h3>
                     </div>
-                    <div class="panel-body">
+                    <div>
                         <?php foreach ($vips as $vip): ?>
                             <div class="row">
                                 <div class="col-md-2">

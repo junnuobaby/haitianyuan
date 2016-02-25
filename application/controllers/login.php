@@ -24,6 +24,16 @@ class Login extends CI_Controller {
     {
         $this->load->view('pages/qq_login');
     }
+    public function find_pwd($step)
+    {
+        if($step == 1){
+            $this->load->view('pages/find_pwd_1');
+        }elseif($step == 2){
+            $this->load->view('pages/find_pwd_2');
+        }elseif($step == 3){
+            $this->load->view('pages/find_pwd_3');
+        }
+    }
 
 }
 

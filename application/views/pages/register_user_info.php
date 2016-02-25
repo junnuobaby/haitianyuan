@@ -59,7 +59,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                               aria-hidden="true"></span>
                                     </div>
 
-                                    <button type="submit" class="btn btn-lg btn-danger btn-block">确定</button>
+                                    <button type="submit" class="btn btn-lg  btn-block">确定</button>
                                 </form>
                             </div>
                             <div class="col-md-4 col-md-offset-1">
@@ -136,7 +136,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                     </div>
 
 
-                                    <button type="submit" class="btn btn-lg btn-danger btn-block ">确定</button>
+                                    <button type="submit" class="btn btn-lg  btn-block ">确定</button>
                                 </form>
                             </div>
 

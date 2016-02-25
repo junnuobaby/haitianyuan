@@ -102,5 +102,8 @@ class Stocks extends CI_Controller
         $status = array('status' => 'success');
         echo json_encode($status);
     }
+    public function cmp_list(){
+        $this->load->view('stocks/cmp_list');
+    }
 }
 

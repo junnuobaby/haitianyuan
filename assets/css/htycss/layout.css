@@ -45,7 +45,7 @@
     padding: 10px 100px;
     color: #FFF;
     font-size: 16px;
-    transition:all 0.2s;
+    border-color: #FF957C;
 }
 a.take_in:hover, a.take_in:active, a.take_in:visited {
     color: white;
@@ -68,6 +68,71 @@ a.take_in:hover{
 }
 .register_input {
     padding-bottom: 0.5em;
+}
+/*页脚样式*/
+footer.page_footer {
+    font-size: 13px;
+    color: #555555;
+    padding-top: 20px;
+    height: 80px;
+    background-color: #d9d9d9;
+    z-index: 1000;
+}
+footer.page_footer span {
+    margin: 0.5em;
+}
+footer.page_footer a {
+    color: #555555;
+}
+footer.page_footer p {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+/*反馈,回到顶部*/
+.fixed-bar{
+    position: fixed;
+    right: 1%;
+    bottom: 1%;
+    z-index: 10000;
+    margin: 0;
+    padding: 0;
+}
+.fixed-bar li{
+    margin: 0;
+    padding: 0;
+    height: 52px;
+    width: 50px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    list-style: none;
+    transition: all 0.5s ease 0s;
+}
+.fixed-bar li:hover{
+    border-color:#FD7A65;
+    cursor: pointer;
+}
+.fixed-bar li.go-top{
+    margin-top: -1px;
+}
+.fixed-bar li.go-top a:hover,a:active, a:focus, a:visited{
+    text-decoration: none;
+    outline: none;
+}
+.fixed-bar li .hz-icon{
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+    color: #999;
+    font-size: 25px;
+}
+.fixed-bar .fixed-bar-text{
+    line-height: 1.2em;
+    display: none;
+    color: #fff;
+    padding: 7px 10px;
+    font-size: 14px;
 }
 /*顶部导航*/
 .header {
@@ -92,6 +157,9 @@ a.take_in:hover{
     max-width: 110px;
 }
 /*顶部网站导航*/
+.top-menu.navbar-nav{
+    margin-top: 5px;
+}
 .top-menu.navbar-nav > li > a {
     padding: 20px 25px;
     font-size: 16px;
@@ -102,13 +170,16 @@ a.take_in:hover{
 .navbar-login {
     padding: 15px 20px;
 }
+
 .navbar-login a {
     padding: 10px 10px;
     font-size: 16px;
 }
+
 .nav.user-nav {
     position: relative;
 }
+
 .nav.user-nav > li {
     height: 70px;
     float: left;
@@ -122,6 +193,7 @@ a.take_in:hover{
     margin-top: 10px;
     margin-left: 20px;
 }
+
 .btn.com:hover, .btn.com:active, .btn.com:focus {
     background: #FD9271 none repeat scroll 0% 0% !important;
     color: #FFF !important;
@@ -174,7 +246,7 @@ a.take_in:hover{
 
 .user-msg > a{
     margin-top: 8px;
- }
+}
 .dropdown.user-img li a:hover, .dropdown.user-msg li a:hover {
     color: #FD9271;
     background: transparent;
@@ -281,14 +353,15 @@ caption.caption-yinbang{
     padding: 10px 10px;
     text-align: center;
 }
-/*上面为更新过的*/
 .btn-a-light:link,
 .btn-a-light:visited,
 .btn-a-light:hover,
 .btn-a-light:active {
     color: white;
 }
-
+a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover {
+    border-color: #FD9271;
+}
 /*登录注册界面*/
 .login-box{
     color: white;
@@ -300,16 +373,22 @@ caption.caption-yinbang{
     box-shadow: 0 0 3px #040404;
     padding: 20px 50px;
     transition: transform 0.5s ease 0s, visibility 0.5s ease 0s, z-index 0.5s ease 0s;
+    -moz-transition:transform 0.5s ease 0s, visibility 0.5s ease 0s, z-index 0.5s ease 0s;
+    -webkit-transition:transform 0.5s ease 0s, visibility 0.5s ease 0s, z-index 0.5s ease 0s;
 }
 .login-box.active {
     z-index: -1;
     visibility: hidden;
     transform: rotateY(90deg);
+    -moz-transform:rotateY(90deg);
+    -webkit-transform:rotateY(90deg);
 }
 .login-box.register {
-    transform: rotateY(90deg);
     z-index: -1;
     visibility: hidden;
+    transform: rotateY(90deg);
+    -moz-transform:rotateY(90deg);
+    -webkit-transform:rotateY(90deg);
 }
 
 .login-box.register.active {
@@ -317,6 +396,8 @@ caption.caption-yinbang{
     visibility: visible;
     display: block;
     transform: rotateY(0deg);
+    -moz-transform:rotateY(0deg);
+    -webkit-transform:rotateY(0deg);
     transition-delay: 0.5s;
 }
 .login-delay {
@@ -359,7 +440,7 @@ caption.caption-yinbang{
     height: 40px;
 }
 .login-btn-div>button.btn:hover{
-    background-color: #FD7A65;
+    background-color: #FD9271;
     color: #fff;
 }
 .login-btn-div{
@@ -372,7 +453,6 @@ caption.caption-yinbang{
     padding: 10px 0 10px 0;
     background-color: #f8f8f8;
 }
-
 .profile-userpic img {
     float: none;
     margin: 0 auto;
@@ -383,20 +463,16 @@ caption.caption-yinbang{
     -moz-border-radius: 50% !important;
     border-radius: 50% !important;
 }
-
 .profile-usermenu {
     margin-top: 10px;
 }
-
 .profile-usermenu ul li {
     padding: 0;
 }
-
 .profile-usermenu li h4 {
     color: #FD9271;
     border-bottom: 1px solid #ebebeb;
 }
-
 .profile-usermenu ul li a {
     color: #8d9cae;
     font-size: 14px;
@@ -404,32 +480,26 @@ caption.caption-yinbang{
     border: none;
     padding-left: 60px;
 }
-
 .profile-usermenu ul li i {
     margin-left: 8px;
     margin-right: 8px;
     font-size: 14px;
 }
-
 .profile-usermenu ul li a:hover {
-    background-color: #FD7A65;
+    background-color: #FD9271;
     color: #ffffff;
 }
-
 .master-profile-panel .form-group {
     margin-left: 20px;
     width: 400px;
     margin-bottom: 20px;
 }
-
 a.basic-info-a {
     color: #FD9271;
 }
-
 .input-group-verification {
     width: 300px;
 }
-
 .avatar-upload {
     margin-right: 50px;
     padding: 4px 10px;
@@ -446,22 +516,18 @@ a.basic-info-a {
     *display: inline;
     *zoom: 1
 }
-
 a.avatar-upload:link {
     color: #ffffff;
 }
-
 a.avatar-upload:visited {
     color: #ffffff;
 }
-
 a.avatar-upload:hover {
     color: #ffffff;
     background: #FD7A65;
     border-color: #ccc;
     text-decoration: none
 }
-
 .avatar-upload input {
     position: absolute;
     font-size: 100px;
@@ -471,27 +537,23 @@ a.avatar-upload:hover {
     filter: alpha(opacity=0);
     cursor: pointer
 }
-
 #display_avatar_block {
     margin: 20px 20px;
+    border: 1px solid #e1e1e1;
 }
-
 #display_avatar_div {
     display: none;
 }
-
 #display_avatar_div button {
     margin-left: 20px;
     margin-bottom: 10px;
 }
-
 .self_master_address {
     color: #FD9271;
 }
-
 /*联系我们页面样式*/
 #contact_us h1 {
-    color: #c1837b;
+    color: #FD9271;
 }
 
 #contact_us li {
@@ -506,7 +568,7 @@ a.avatar-upload:hover {
 }
 
 .master_homepage_jumptron_div {
-    margin-top: 130px;
+    margin-top: 100px;
 }
 
 .master_homepage_jumptron_div table.master_info h4 {
@@ -522,12 +584,12 @@ a.avatar-upload:hover {
 }
 
 .master_homepage_jumptron_div a.btn {
-    color: #f56857;
-    background-color: #ffffff;
+    color: #FD9271;
     font-weight: 600;
-    border: 1px solid #f1362f;
+    border: 1px solid #FD9271;
     position: relative;
     margin-top: 10px;
+    background-color: #fff;
 }
 
 .master_homepage_jumptron_div a.btn.vip-link {
@@ -540,7 +602,7 @@ a.avatar-upload:hover {
     background-color: transparent;
 }
 
-.avatar_box {
+.master_homepage_jumptron_div .avatar_box {
     width: 150px;
     height: auto;
     border: solid 5px white;
@@ -674,8 +736,8 @@ a.avatar-upload:hover {
 }
 
 .q_a_span {
-    border: 1px solid #96cc75;
-    background-color: #96cc75;
+    border: 1px solid #96CC75;
+    background-color: #96CC75;
     padding: 4px;
     color: white;
     font-size: 16px;
@@ -730,7 +792,7 @@ a.avatar-upload:hover {
 }
 
 .sub_nav {
-    margin: 10px auto 15px 10px;
+    margin: 10px auto 10px 10px;
     padding: 10px;
     font-size: 18px;
 }
@@ -749,7 +811,7 @@ div.master_view section {
 .qu_hr {
     height: 20px;
     background-color: #f3f3f3;
-    margin: 5px 0px;
+    margin: 5px 0;
 }
 
 .key_word {
@@ -762,7 +824,7 @@ div.master_view section {
 }
 
 .qu_btn {
-    background: #a0d56d;
+    background: #96CC75;
     font-size: 14px;
     color: #fff;
     text-align: center;
@@ -777,7 +839,7 @@ div.master_view section {
 }
 
 .qu_time .questioner {
-    color: #428bca;
+    color: #59b0ff;
     margin-left: 5px;
 }
 
@@ -843,24 +905,19 @@ div.master_view section {
     font-size: 14px;
 }
 
-.view_footer .edit_view {
+.view_footer .edit_view{
     color: #FD9271;
     float: right;
     margin-right: 10px;
 }
-
-.pages {
+.pages{
     display: inline-block;
-    padding-left: 0;
-    margin: 20px 0;
+    margin: 10px 0;
     border-radius: 4px;
     text-align: center;
-    padding: 92px 0 42px 0;
     color: #fff;
-    margin-bottom: 30px;
 }
-
-.pages a {
+.pages a{
     position: relative;
     padding: 6px 12px;
     margin-left: -1px;
@@ -870,136 +927,117 @@ div.master_view section {
     background-color: #fff;
     border: 1px solid #ddd;
 }
-
-.pages a.current {
+.pages a.current{
     background-color: #e8e8e8;
 }
-
-.sop_header {
+.sop_header{
     text-align: center;
     padding: 92px 0 42px 0;
     color: #fff;
     margin-bottom: 30px;
 }
-
-.sop_header h1 {
+.sop_header h1{
     font-size: 3em;
 }
-
-.sop_article article {
+.sop_article article{
     padding: 35px;
 }
-
-.sop_article article .sop-author {
+.sop_article article .sop-author{
     margin: 0 20px;
 }
-
-.sop_article article .sop-meta {
+.sop_article article .sop-meta{
     color: #959595;
     margin: 14px 0 0;
     text-align: center;
 }
-
 .sop_article .sop-content {
     margin: 20px 0;
 }
-
-.sop_article footer {
+.sop_article footer{
     border-top: 1px solid #ebebeb;
     padding: 20px 0 0 0;
 }
-
-.sop_article footer button {
+.sop_article footer button{
     float: right;
     margin-left: 20px;
 }
-
-.set_price {
+.set_price{
     padding: 30px 20px;
 }
-
-.master_avatar_box {
+.master_avatar_box{
     height: 100px;
     width: 100px;
 }
-
-.qa_his_height {
+.qa_his_height{
     max-height: 800px;
-    overflow: scroll;
+    overflow: auto;
     padding: 0 20px;
 }
-
-.alert_info {
+.alert_info{
     text-align: center;
     margin: 50px 0;
 }
-
-.sub_navigation {
+.question_label{
+    float: left;
+}
+.question_label label{
+    margin-right: 15px;
+}
+/*stocks*/
+.sub_navigation{
     border-top: 1px solid #ebebeb;
     border-bottom: 2px solid #e1e1e1;
     margin-bottom: 20px;
 }
-
-.stocks_menu {
+.stocks_menu{
     padding: 0;
     margin: 0;
     display: inline-block;
     position: relative;
 }
-
-.stocks_menu li {
+.stocks_menu li{
     list-style: none;
     display: inline-block;
     padding: 0 15px;
 }
-
-.stocks_menu li a {
+.stocks_menu li a{
     padding: 0 21px;
     line-height: 4em;
     color: #effdff;
     font-size: 16px;
     text-shadow: 1px 1px 0.8em #222222;
 }
-
-.stocks_menu li a:link, a:visited, a:active {
+.stocks_menu li a:link, a:visited, a:active{
     text-decoration: none;
 }
-
-.nav_current {
+.nav_current{
     border-bottom: 2px solid #FD9271;
     margin-bottom: -2px;
 }
-
-.stocks_min_h {
+.stocks_min_h{
     min-height: 1000px;
 }
-
-.sel_pill {
+.sel_pill{
     border: solid 1px #ebebeb;
 }
-
-.simulate_panel {
+.simulate_panel{
     padding: 10px 40px;
 }
-
-.tab_header {
+.tab_header{
     margin-bottom: 40px;
 }
-
-ul.simulate_tablist {
+ul.simulate_tablist{
     padding: 20px 20px 0 20px;
 }
-
-ul.simulate_tablist li {
+ul.simulate_tablist li{
     list-style: none;
     display: inline-block;
     border: none;
 }
-
-ul.simulate_tablist li a {
+ul.simulate_tablist li a{
     width: 100%;
     height: 100%;
-    padding: 10px 25px;
+    padding:10px 25px;
     line-height: 2.5em;
     border: 1px solid #548294;
     border-radius: 25px 25px 25px 25px;
@@ -1007,58 +1045,461 @@ ul.simulate_tablist li a {
     margin-right: 20px;
     transition: all 0.2s;
 }
-
-ul.simulate_tablist li a:hover {
+ul.simulate_tablist li a:hover{
     background-color: #548294;
     color: white;
+    text-shadow: 1px 1px 0.8em #000;
 }
-
 .active_a_item {
     background-color: #548294;
     color: white;
     text-shadow: 1px 1px 0.8em #000;
 }
-
-.margin_to_top {
-    margin-top: 30px;
-}
-
-.margin_to_bottom {
-    margin-bottom: 30px;
-}
-
-.buy_stock_btn {
+.buy_stock_btn{
     float: right;
 }
-
-.navbar-not-fixed {
+.navbar-not-fixed{
     margin-bottom: 0;
 }
-
-.bond_code_div {
+.bond_code_div{
     position: relative;
 }
-
-.hint_list {
+.hint_list{
     border: 1px solid #dedede;
     color: #555;
-    /*display: none;*/
     position: absolute;
     z-index: 1000;
-    width: 85%;
+    width:  85%;
     opacity: 0.9;
     background-color: white;
+    display: none;
 }
-
-.hint_active {
+.hint_active{
     background-color: #99cfff;
 }
+#bond_code option{
+    margin-bottom: 5px;
+}
+.warning_bg_color{
+    background-color: #FCF8E3;}
+.border_none{
+    border: none;
+}
+.warehouse{
+    margin-top: 20px;
+}
+#graph_modal_body{
+    padding-top: 5px;
+}
+.asset_detail{
+    height: 400px;
+    padding: 10px;
+    padding-top: 20px;
+}
+#assets_form .form-group{
+    margin-bottom: 0;
+}
+#assets_form .align_left{
+    padding-left: 0;
+}
+#perform_canvas{
+    height: 450px;
+}
+#pie_canvas{
+    height: 300px;
+    padding-top: 50px;
+}
+#profit_table{
+    margin: auto 50px;
+}
+.rank_table{
+    margin: 0 20px;
+}
+tr.rank_thead th{
+    text-align: center;
+}
+.table_left{
+    text-align: left;
 
-.question_label {
-    float: left;
+}
+.table_right{
+    text-align: right;
+}
+.plaque{
+    margin: 0 10px 15px 10px;
+    height: 70px;
+}
+.plaque p{
+    font-size: 40px;
+    top: 12px;
+    position: relative;
+}
+#ranking_sidebar .list-group-item.active,
+#ranking_sidebar .list-group-item.active:focus,
+#ranking_sidebar .list-group-item.active:hover {
+    z-index: 2;
+    color: #FFF;
+    background-color: #396D81;
+    border-color: #315568;
+}
+.flow-sidebar.affix,
+.flow-sidebar.affix-top,
+.flow-sidebar.affix-bottom {
+    width: 160px;
+}
+.flow-sidebar.affix {
+    position: fixed;
+    top: 20px;
+}
+.flow-sidebar.affix-bottom {
+    position: absolute;
+}
+.flow-sidebar.affix-bottom,
+.flow-sidebar.affix {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/*理财师入驻*/
+.master-enter-status {
+    margin-top: 150px;
+    position: relative;
+    margin-bottom: 150px;
+}
+.master-enter-status-timeline {
+    height: 12px;
+    border: 1px solid #aaa;
+    border-radius: 7px;
+    background: #eee;
+    box-shadow: 0 0 5px 0 #C2C2C2 inset;
+}
+.master-enter-status-timeline .master-enter-status-timeline-completion {
+    height: 8px;
+    margin: 1px;
+    border-radius: 7px;
+    background: #ff7c3b;
+    width: 0;
+}
+.master-enter-status-timeline .master-enter-status-timeline-completion.c1 {
+    width: 33%;
+}
+.master-enter-status-timeline .master-enter-status-timeline-completion.c2 {
+    width: 66%;
+}
+.master-enter-status-timeline .master-enter-status-timeline-completion.c3 {
+    width: 100%;
+}
+.image-master-enter-status {
+    border: 1px solid #ddd;
+    padding: 7px;
+    box-shadow: 0 0 10px 0 #999;
+    background-color: #fdfdfd;
+    position: absolute;
+    margin-top: -35px;
+}
+.image-master-enter-status .active {
+    box-shadow: 0 0 10px 0 #ff7c3b;
+}
+.image-master-enter-status.active .status {
+    color: #e47943;
+    text-shadow: 0 0 1px #777;
+}
+.image-master-enter-status .icon {
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+}
+.image-master-enter-status .status {
+    position: absolute;
+    text-shadow: 1px 1px #eee;
+    color: #333;
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    width: 180px;
+    top: -50px;
+    left: 50px;
+}
+.image-master-enter-status-register {
+    left: 0;
+}
+.image-master-enter-status-information {
+    left: 31.74%;
+}
+.image-master-enter-status-realname {
+    left: 63.48%;
+}
+.image-master-enter-status-completed {
+    right: 0;
+}
+.image-master-enter-status-delivered .status {
+    top: 85px;
+    left: -180px;
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    text-align: right;
+}
+.image-master-enter-status-delivered .status:before {
+    display: none;
+}
+.image-master-enter-status-completed .status {
+    top: 85px;
+    left: -180px;
+    transform: rotate(-30deg);
+    -webkit-transform: rotate(-30deg);
+    text-align: right;
+}
+.image-master-enter-status-completed .status:before {
+    display: none;
+}
+/*找回密码*/
+.f_pwd_container{
+    margin-top: 70px;
+}
+a.next_vcode{
+    color: #266392 !important;
+    text-decoration: underline;
+}
+.img_vcode{
+    border: 1px solid #e2e2e2;
+}
+.f_pwd_form{
+    margin: 40px auto;
+}
+.f_pwd_form .form-control{
+    height: 40px;
+}
+.f_pwd_form .form-group {
+    margin-bottom: 20px;
+}
+/*模拟炒股金榜*/
+.match_txt_color {
+    color:#FFF9AF;
+}
+.match_jmp_txt{
+    position: relative;
+}
+.match_jmp_txt a:link,.match_jmp_txt a:visited,.match_jmp_txt a:hover,.match_jmp_txt a:focus{
+    color: white;
+}
+.match_jmp_txt a:link{
+    display: block;
+    position: absolute;
+    font-size: 25px;
+    width:160px;
+    background-color: #59b0ff;
+    right: 20px;
+    bottom: 10px;
+}
+.match_jmp_txt a:hover{
+    background-color: #2e81ff;
+}
+.match_section{
+    background-color: white;
+    padding: 20px 30px;
+    margin: 20px auto;
+    position: relative;
+    min-height: 100px;
+}
+.match_badge{
+    background-color: #E33F27;
+    position: absolute;
+    padding: 10px 10px 10px 10px;
+    left:20px;
+    top:-5px;
+    font-size: 22px;
+    color: #FFF6D2;
+    border: 10px solid #E33F27;
+    outline: solid 3px #FFF9AF;
+    outline-offset: -8px;
+}
+.match_cmp_rank{
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 18px;
+}
+.match_rules{
+    margin: 60px 10px 10px 10px;
+}
+.match_section h3::before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: #E33F27;
+    margin-right: 20px;
+}
+.match_section p{
+    font-size: 18px;
+    font-weight: 400;
+    vertical-align: bottom;
+    color: #666;
+    margin-top: 15px;
+    line-height: 30px;
+}
+span.rank_cirle{
+    background-color: #D1353B;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px/13px;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+    padding-left: 8px;
+}
+.match_rank_table .heading{
+    font-size: 18px;
+    line-height: 42px;
+    color: #969696;
+}
+/*比赛个人中心*/
+.match_sidebar{
+    min-height:700px;
+    border:1px solid #fff;
+    box-shadow: 0 0 2px 0 #fff;
+}
+.match_sidebar .collapse a:link{
+    color:#4d5054
+}
+.match_sidebar .collapse a.match_nav_active:link,.match_sidebar .collapse a.match_nav_active:visited{
+    color: #FD7A65 !important;
+}
+.match_avatar{
+    padding: 20px 10px 0 10px;
+    margin-bottom: 40px;
+}
+.match_avatar img{
+    border: 1px solid #FFF6D2;
+}
+a.match_center_item:link, a.match_center_item:visited{
+    display: block;
+    padding: 20px 10px 20px 20px;
+    border-bottom: 1px solid #a7a7a7;
+    border-top: 1px solid #a7a7a7;
+    font-size: 16px;
+    color: #4d5054;
+}
+a.match_center_item.match_nav_active:link, a.match_center_item.match_nav_active:visited{
+    background-color: #FFF;
+    color: #FD7A65;
+}
+a.match_center_item:hover{
+    background-color: #FFF;
+}
+a.match_center_item span{
+    margin-right: 10px;
+}
+a.match_trade_btn{
+    display: block;
+    margin: 10px 10px 5px 60px;
+    color: #616569;
+}
+/*普通用户个人主页*/
+img.user_avatar_box{
+    margin: 50px auto 10px auto;
+    width: 120px;
+    height: 120px;
+    border: 5px solid rgba(255, 255, 255, 0.4);
+    display: block;
+}
+.user_homepage_name{
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+}
+.user_signature{
+    max-width: 424px;
+    height: 65px;
+    font-size: 14px;
+    line-height: 24px;
+    background: rgba(255, 255, 255, 0.3) none repeat scroll 0% 0%;
+    border-radius: 20px;
+    margin: 12px auto 0px;
+    padding: 12px 50px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.master_avatar_box .user_homepage_avatar{
+    border: 5px solid rgba(255, 166, 118, 0.4);
+}
+#simulation_contest p{
+    padding: 15px;
+}
+/*问答首页*/
+.lcs_jmp{
+    width: 100%;
+    height: 400px;
+    background-color: #7c7c7c;
+    margin-bottom: 30px;
+}
+.lcs_jmp img{
+    margin-top: 10px;
+}
+.lcs_num_box{
+    padding: 20px;
+    border-radius: 4px;
+    background-color: rgba(253, 146, 113, 1);
+    color: #FFF;
+    margin-bottom: 20px;
+}
+.lcs_num_box .lcs_answer_num span{
+    display: inline-block;
+    padding: 10px 10px;
+    background-color: #fff;
+    color: #FD9271;
+    font-size: 40px;
+    font-weight: 400;
+    box-shadow: 0px 1px 1px rgba(180, 180, 180, 0.59), 0px 1px 1px rgba(194, 194, 194, 0.38) inset;
+    border-radius: 6px;
+}
+.lcs_index_cnt .master_lists_box{
+    padding: 30px 30px;
+}
+.lcs_index_cnt .master_intro_box{
+    position: relative;
+}
+.lcs_index_cnt .action_box{
+    position: absolute;
+    right:20px;
+    top:0px;
+}
+/*海天介绍页面*/
+.ht_info_nav {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    /*color: rgb(246,186,129);*/
+}
+.section {
+    text-align: center;
+    color: #FD9271;
+    font-size: 30px;
+}
+.section h1 {
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-size: 40px;
+    font-weight: 400;
+}
+.center-wrap {
+    position: relative;
+    height: 100%;
+    width: 1040px;
+    margin: 0 auto;
+}
+.section1{
+    background-color: #FDF6E1;
+    color: #8A5E25;
+}
+.section1 .lcs_desc {
+    padding-top: 15%;
+    width: 800px;
+    margin: 0px auto;
 }
 
-.question_label label {
-    margin-right: 15px;
-}
+
+
+
 

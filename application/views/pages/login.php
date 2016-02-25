@@ -41,13 +41,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <input name="remember_me" checked="checked" type="checkbox"> 记住密码
                     </div>
                     <div class="col-md-6">
-                        <a href="#" class="white-color pull-right">忘记密码？</a>
+                        <a href="<?php echo base_url('index.php/login/find_pwd/1');?>" class="white-color pull-right">忘记密码？</a>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <div class="login-btn-div">
-                            <button type="submit" class="btn btn-block self-btn-danger">登陆</button>
+                            <button type="submit" class="btn btn-block bg-theme">登陆</button>
                         </div>
                     </div>
                 </div>
@@ -93,7 +93,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                            placeholder="验证码" required>
 
                     <div class="input-group-btn">
-                        <button id="send_code" class="btn self-btn-danger">获取验证码</button>
+                        <button id="send_code" class="btn  bg-theme">获取验证码</button>
                     </div>
                 </div>
                 <div class="input-group">
@@ -118,7 +118,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <div class="row pwd-help-info">
                     <div class="col-md-12">
                         <div class="login-btn-div">
-                            <button type="submit" class="btn btn-block self-btn-danger">注册</button>
+                            <button type="submit" class="btn btn-block bg-theme">注册</button>
                         </div>
                     </div>
                 </div>

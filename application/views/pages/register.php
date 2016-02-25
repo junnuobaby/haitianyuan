@@ -41,7 +41,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                 <input type="text" class="form-control" id="verification_code" name="phone_code"
                                        placeholder="输入手机收到的验证码" required>
                                 <span class="input-group-btn">
-                                    <button href="#" id="send_code" class="btn btn-danger btn-a-light">发送验证码</button>
+                                    <button href="#" id="send_code" class="btn  btn-a-light">发送验证码</button>
                                 </span>
                             </div>
                             <!-- /input-group -->
@@ -69,7 +69,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                                    data-content="前后密码输入不一致！">
                             <span class="glyphicon glyphicon-lock form-control-feedback" aria-hidden="true"></span>
                         </div>
-                        <button type="submit" class="btn btn-lg btn-block btn-danger">注册</button>
+                        <button type="submit" class="btn btn-lg btn-block ">注册</button>
                         </form>
                     </div>
                 </div>
