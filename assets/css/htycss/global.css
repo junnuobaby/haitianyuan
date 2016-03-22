@@ -37,7 +37,8 @@ a.btn.bg-theme:hover,button.btn.bg-theme:hover{
 }
 .wrapper {
     min-height: 100%;
-    margin: 0 auto 3em auto;
+    padding-bottom: 120px;
+    margin: 0 auto -80px auto;
 }
 .inline_block{
     display: inline-block;
@@ -76,6 +77,9 @@ a.btn.bg-theme:hover,button.btn.bg-theme:hover{
 }
 .bg-green{
     background-color: #96CC75;
+}
+.bg-blue{
+    background-color: #719299;
 }
 /*边框圆角*/
 .block-radius{

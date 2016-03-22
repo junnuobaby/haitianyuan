@@ -56,7 +56,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                         <?php endforeach; ?>
                     </div>
                 </div>
-
             </div>
         </div>
         <?php $this->load->view('./templates/right-sidebar'); ?>

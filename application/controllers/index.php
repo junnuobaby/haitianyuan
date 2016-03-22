@@ -18,6 +18,10 @@ class Index extends CI_Controller {
     }
     public function ht_info()
     {
-        $this->load->view('pages/ht_info');
+        $this->load->view('info/lcs_info');
+    }
+    public function ht_vip()
+    {
+        $this->load->view('info/vip');
     }
 }

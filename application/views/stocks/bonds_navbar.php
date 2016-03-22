@@ -8,7 +8,7 @@
                         <li><a class="white-color" href="<?php echo base_url('/index.php/index');?>">首页</a></li>
                         <li class="<?php if($nav_mode == "simu_index") echo "nav_current"; ?>"><a href="<?php echo base_url('index.php/stocks/simulation/index')?>">模拟交易</a></li>
                         <li ><a href="#">英雄榜</a></li>
-                        <li class="<?php if($nav_mode == "match_lists") echo "nav_current"; ?>"><a href="<?php echo base_url('index.php/match/index')?>">海天赛场</a></li>
+<!--                        <li class="--><?php //if($nav_mode == "match_lists") echo "nav_current"; ?><!--"><a href="--><?php //echo base_url('index.php/match/index')?><!--">海天赛场</a></li>-->
                         <li class="<?php if($nav_mode == "trading_rules") echo "nav_current"; ?>"><a href="<?php echo base_url('index.php/stocks/rules')?>">交易规则</a></li>
                         <li class="<?php if($nav_mode == "trading_guides") echo "nav_current"; ?>"><a href="<?php echo base_url('index.php/stocks/guides')?>">操作指南</a></li>
                     </ul>
