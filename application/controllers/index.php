@@ -16,12 +16,16 @@ class Index extends CI_Controller {
     {
         $this->load->view('pages/authentication');
     }
-    public function ht_info()
+    public function ht_lcs_info()
     {
-        $this->load->view('info/lcs_info');
+        $this->load->view('info/lcs');
     }
     public function ht_vip()
     {
         $this->load->view('info/vip');
+    }
+    public function ht_match()
+    {
+        $this->load->view('info/match');
     }
 }

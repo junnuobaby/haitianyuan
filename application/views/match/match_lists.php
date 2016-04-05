@@ -6,7 +6,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <html lang="zh-cn">
 <?php $this->load->view('./templates/head'); ?>
 <?php
-$item = array('rank'=>'1', 'name'=>'158xxxxxx75', 'profit'=>'142.31%');
+$item = array('rank'=>'1', 'name'=>'158xxxxxx75', 'profit_rate'=>'142.31%', 'week_rate'=> '10.2%', 'month_rate'=>'60%');
 $lists_10 = array($item,$item,$item,$item,$item,$item,$item,$item,$item,$item);
 ?>
 <body class="match_index_body">
@@ -17,15 +17,58 @@ $lists_10 = array($item,$item,$item,$item,$item,$item,$item,$item,$item,$item);
             <div class="match_jmp"></div>
         </div>
         <div class="col-md-10  col-md-offset-1">
-            <div class="match_jmp_txt">
+            <div class="match_jmp_logo">
                 <h1 class="match_txt_color">参加金榜比赛赢取大奖</h1>
                 <h3 class="match_txt_color">所以参赛选手缴纳的入场费，将作为奖金全额发放</h3>
-                <a href="<?php echo base_url('index.php/match/match_center')?>" class="btn">我要报名</a>
             </div>
         </div>
     </div>
     <div class="container">
         <div class="col-md-10 col-md-offset-1">
+            <section class="match_section">
+                <span class="match_badge">报名入口</span>
+                <div class="match_rules">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3>周赛</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <p>每周进行收益排名，比赛时间为周一至周五。</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="match_jmp_txt">
+                                <a href="<?php echo base_url('index.php/match/match_center')?>" class="btn">报名周赛</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3>月赛</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <p>每月进行收益排名，比赛时间为月初至月末。</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="match_jmp_txt">
+                                <a href="<?php echo base_url('index.php/match/match_center')?>" class="btn">报名月赛</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <h3>年赛</h3>
+                        </div>
+                        <div class="col-md-6">
+                            <p>每年进行收益排名，比赛时间为年初至年末。</p>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="match_jmp_txt">
+                                <a href="<?php echo base_url('index.php/match/match_center')?>" class="btn">报名年赛</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="match_section">
                 <span class="match_badge">参赛规则</span>
                 <div class="match_rules">
@@ -80,39 +123,25 @@ $lists_10 = array($item,$item,$item,$item,$item,$item,$item,$item,$item,$item);
                 <a href="#" class="match_cmp_rank pull-right">查看完整榜单 <span class="glyphicon glyphicon-hand-right"></span></a>
                 <div class="match_rules">
                     <div class="row">
-                        <div class="col-md-6">
-                            <table class="table  match_rank_table">
+                        <div class="col-md-12">
+                            <table class="table match_rank_table table-condensed">
                                 <thead>
                                 <tr class="heading">
                                     <th>排名</th>
                                     <th>用户名</th>
                                     <th>总收益率</th>
+                                    <th>月收益率</th>
+                                    <th>周收益率</th>
                                 </tr>
                                 </thead>
                                 <?php foreach($lists_10 as $list):?>
                                 <tr>
                                     <td ><span class="rank_cirle"><?php echo $list['rank'];?></span></td>
                                     <td><?php echo $list['name'];?></td>
-                                    <td><?php echo $list['profit'];?></td>
+                                    <td><?php echo $list['profit_rate'];?></td>
+                                    <td><?php echo $list['month_rate'];?></td>
+                                    <td><?php echo $list['week_rate'];?></td>
                                 </tr>
-                                <?php endforeach;?>
-                            </table>
-                        </div>
-                        <div class="col-md-6">
-                            <table class="table match_rank_table">
-                                <thead>
-                                <tr class="heading">
-                                    <th>排名</th>
-                                    <th>用户名</th>
-                                    <th>总收益率</th>
-                                </tr>
-                                </thead>
-                                <?php foreach($lists_10 as $list):?>
-                                    <tr>
-                                        <td><span class="rank_cirle"><?php echo $list['rank'];?></span></td>
-                                        <td><?php echo $list['name'];?></td>
-                                        <td><?php echo $list['profit'];?></td>
-                                    </tr>
                                 <?php endforeach;?>
                             </table>
                         </div>
